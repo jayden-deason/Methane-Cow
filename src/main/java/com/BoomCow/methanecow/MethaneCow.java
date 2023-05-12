@@ -1,4 +1,4 @@
-package com.example.examplemod;
+package com.BoomCow.methanecow;
 
 import net.minecraft.block.Block;
 import net.minecraft.block.Blocks;
@@ -20,13 +20,13 @@ import java.util.stream.Collectors;
 
 // The value here should match an entry in the META-INF/mods.toml file
 @Mod("methanecow")
-public class ExampleMod
+public class MethaneCow
 {
     // Directly reference a log4j logger.
     public static final String MOD_ID = "methanecow";
     private static final Logger LOGGER = LogManager.getLogger();
 
-    public ExampleMod() {
+    public MethaneCow() {
         // Register the setup method for modloading
         FMLJavaModLoadingContext.get().getModEventBus().addListener(this::setup);
         // Register the enqueueIMC method for modloading
