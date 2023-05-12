@@ -49,7 +49,7 @@ public class MethaneCow
 
     private void doClientStuff(final FMLClientSetupEvent event) {
         // do something that can only be done on the client
-        
+
     }
 
     private void enqueueIMC(final InterModEnqueueEvent event)
