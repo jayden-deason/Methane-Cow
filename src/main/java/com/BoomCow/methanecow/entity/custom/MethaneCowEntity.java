@@ -72,6 +72,11 @@ public class MethaneCowEntity extends CowEntity {
         }
     }
 
+    public void onDeath(DamageSource cause) {
+        if(cause == null)
+            this.explode();
+        super.onDeath(cause);
+    }
     public void tick() {
         if (this.isAlive()) {
             this.lastActiveTime = this.timeSinceIgnited;
