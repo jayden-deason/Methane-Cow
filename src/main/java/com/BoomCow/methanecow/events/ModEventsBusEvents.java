@@ -2,6 +2,7 @@ package com.BoomCow.methanecow.events;
 
 import com.BoomCow.methanecow.MethaneCow;
 import com.BoomCow.methanecow.entity.ModEntityTypes;
+import com.BoomCow.methanecow.entity.custom.BabyMethaneCowEntity;
 import com.BoomCow.methanecow.entity.custom.MethaneCowEntity;
 import com.BoomCow.methanecow.item.custom.ModSpawnEggItem;
 import net.minecraft.entity.EntityType;
@@ -16,6 +17,7 @@ public class ModEventsBusEvents {
     @SubscribeEvent
     public static void addEntityAttributes(EntityAttributeCreationEvent event) {
         event.put(ModEntityTypes.METHANE_COW.get(), MethaneCowEntity.registerAttributes().create());
+        event.put(ModEntityTypes.BABY_METHANE_COW.get(), BabyMethaneCowEntity.registerAttributes().create());
     }
 
     @SubscribeEvent
