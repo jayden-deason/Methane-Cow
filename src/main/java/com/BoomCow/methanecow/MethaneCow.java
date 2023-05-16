@@ -2,12 +2,12 @@ package com.BoomCow.methanecow;
 
 import com.BoomCow.methanecow.entity.ModEntityTypes;
 import com.BoomCow.methanecow.item.ModItems;
+import com.BoomCow.methanecow.util.ModSoundEvents;
 import net.minecraft.block.Block;
 import net.minecraft.block.Blocks;
 import net.minecraft.client.renderer.entity.CowRenderer;
 import net.minecraftforge.common.MinecraftForge;
 import net.minecraftforge.event.RegistryEvent;
-import net.minecraftforge.event.entity.player.PlayerInteractEvent;
 import net.minecraftforge.eventbus.api.IEventBus;
 import net.minecraftforge.eventbus.api.SubscribeEvent;
 import net.minecraftforge.fml.InterModComms;
@@ -38,7 +38,9 @@ public class MethaneCow
 
         ModEntityTypes.register(eventBus);
         ModItems.register(eventBus);
-        ;
+
+        ModSoundEvents.register(eventBus);
+
 
         eventBus.addListener(this::setup);
         // Register the enqueueIMC method for modloading

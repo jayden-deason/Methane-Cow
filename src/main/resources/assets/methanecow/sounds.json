@@ -1,0 +1,11 @@
+{
+  "cow_fart": {
+    "category": "neutral",
+    "sounds": [
+      {
+        "name": "methanecow:cow_fart",
+        "volume": 0.8
+      }
+    ]
+  }
+}

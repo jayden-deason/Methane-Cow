@@ -1,5 +1,6 @@
 package com.BoomCow.methanecow.entity.custom;
 
+import com.BoomCow.methanecow.util.ModSoundEvents;
 import net.minecraft.entity.AreaEffectCloudEntity;
 import net.minecraft.entity.EntityType;
 import net.minecraft.entity.passive.CowEntity;
@@ -7,13 +8,11 @@ import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.item.ItemStack;
 import net.minecraft.item.Items;
 import net.minecraft.potion.EffectInstance;
-import net.minecraft.util.ActionResultType;
-import net.minecraft.util.DrinkHelper;
-import net.minecraft.util.Hand;
-import net.minecraft.util.SoundEvents;
+import net.minecraft.util.*;
 import net.minecraft.world.Explosion;
 import net.minecraft.world.World;
 
+import javax.annotation.Nullable;
 import java.util.Collection;
 
 public class MethaneCowEntity extends CowEntity {
@@ -27,6 +26,18 @@ public class MethaneCowEntity extends CowEntity {
 
     public MethaneCowEntity(EntityType<? extends CowEntity> type, World world) {
         super(type, world);
+    }
+
+    @Nullable
+    @Override
+    public void playAmbientSound() {
+        this.playSound(ModSoundEvents.COW_FART.get(), 0.8F, 1.0F);
+    }
+
+    @Nullable
+    @Override
+    protected SoundEvent getDeathSound() {
+        return ModSoundEvents.COW_FART.get();
     }
 
     @Override
