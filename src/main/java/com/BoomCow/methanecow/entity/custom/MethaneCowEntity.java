@@ -28,16 +28,17 @@ public class MethaneCowEntity extends CowEntity {
         super(type, world);
     }
 
-    @Nullable
+
     @Override
     public void playAmbientSound() {
-        this.playSound(ModSoundEvents.COW_FART.get(), 0.8F, 1.0F);
+        this.playSound(ModSoundEvents.FART.get(), 0.8F, 1.0F);
     }
 
     @Nullable
     @Override
     protected SoundEvent getDeathSound() {
-        return ModSoundEvents.COW_FART.get();
+        super.playSound(ModSoundEvents.FART.get(), 0.2F, 1.0F);
+        return null;
     }
 
     @Override
