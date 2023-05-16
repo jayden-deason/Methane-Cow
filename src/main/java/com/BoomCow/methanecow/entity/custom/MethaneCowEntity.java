@@ -31,7 +31,15 @@ public class MethaneCowEntity extends CowEntity {
 
     @Override
     public void playAmbientSound() {
-        this.playSound(ModSoundEvents.FART.get(), 0.8F, 1.0F);
+        int i = (int) (Math.random() * 100) + 1;
+        if(i<90)
+            this.playSound(SoundEvents.ENTITY_COW_AMBIENT, 0.8F, 1.0F);
+        else {
+            this.playSound(ModSoundEvents.FART.get(), 10.0F, 0.2F);
+            int j = (int) (Math.random() * 100) + 1;
+            if(j<50)
+                this.ignite();
+        }
     }
 
     @Nullable
