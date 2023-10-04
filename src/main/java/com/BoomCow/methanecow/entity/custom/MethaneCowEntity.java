@@ -10,13 +10,13 @@ import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.item.ItemStack;
 import net.minecraft.item.Items;
 import net.minecraft.potion.EffectInstance;
+import net.minecraft.potion.Effects;
 import net.minecraft.util.*;
 import net.minecraft.world.Explosion;
 import net.minecraft.world.World;
 import net.minecraft.world.server.ServerWorld;
 
 import javax.annotation.Nullable;
-import java.util.Collection;
 
 public class MethaneCowEntity extends CowEntity {
     private int lastActiveTime;
@@ -35,10 +35,23 @@ public class MethaneCowEntity extends CowEntity {
     @Override
     public void playAmbientSound() {
         int i = (int) (Math.random() * 100) + 1;
-        if(i<80)
-            this.playSound(SoundEvents.ENTITY_COW_AMBIENT, 0.8F, 1.0F);
+        if(i<80) {
+            if (this.isChild()) {
+                this.playSound(ModSoundEvents.FART.get(), 1.0F, 2.0F);
+            }
+            else{
+                this.playSound(SoundEvents.ENTITY_COW_AMBIENT, 0.8F, 1.0F);
+            }
+
+        }
         else {
-            this.playSound(ModSoundEvents.FART.get(), 10.0F, 0.2F);
+            if(this.isChild()){
+                this.playSound(ModSoundEvents.FART.get(), 1.0F, 2.0F);
+            }
+            else{
+                this.spawnLingeringCloud();
+                this.playSound(ModSoundEvents.FART.get(), 10.0F, 0.2F);
+            }
             int j = (int) (Math.random() * 100) + 1;
             if(j<=1)
                 this.ignite();
@@ -75,6 +88,8 @@ public class MethaneCowEntity extends CowEntity {
         }
     }
 
+
+
     public void tick() {
         if (this.isAlive()) {
             this.lastActiveTime = this.timeSinceIgnited;
@@ -107,6 +122,11 @@ public class MethaneCowEntity extends CowEntity {
 
     private void explode() {
         if (!this.world.isRemote) {
+
+            if(this.isChild()){
+                explosionRadius = 1;
+            }
+
             Explosion.Mode explosion$mode = net.minecraftforge.event.ForgeEventFactory.getMobGriefingEvent(this.world, this) ? Explosion.Mode.DESTROY : Explosion.Mode.NONE;
             float f = this.charged ? 2.0F : 1.0F;
             this.dead = true;
@@ -118,28 +138,17 @@ public class MethaneCowEntity extends CowEntity {
     }
 
     private void spawnLingeringCloud() {
-        Collection<EffectInstance> collection = this.getActivePotionEffects();
-        if (!collection.isEmpty()) {
+        EffectInstance collection = new EffectInstance(Effects.POISON, 100, 0, false, false);
             AreaEffectCloudEntity areaeffectcloudentity = new AreaEffectCloudEntity(this.world, this.getPosX(), this.getPosY(), this.getPosZ());
-            areaeffectcloudentity.setRadius(2.5F);
+            areaeffectcloudentity.setRadius(10F);
             areaeffectcloudentity.setRadiusOnUse(-0.5F);
             areaeffectcloudentity.setWaitTime(10);
             areaeffectcloudentity.setDuration(areaeffectcloudentity.getDuration() / 2);
             areaeffectcloudentity.setRadiusPerTick(-areaeffectcloudentity.getRadius() / (float)areaeffectcloudentity.getDuration());
-
-            for(EffectInstance effectinstance : collection) {
-                areaeffectcloudentity.addEffect(new EffectInstance(effectinstance));
-            }
-
-            this.world.addEntity(areaeffectcloudentity);
+            areaeffectcloudentity.addEffect(new EffectInstance(collection));
+            this.getEntityWorld().addEntity(areaeffectcloudentity);
         }
 
-    }
-
-//    @Override
-//    public MethaneCowEntity onChildSpawnFromBreeding(ServerWorld world, AgeableEntity entity) {
-//        return ModEntityTypes.METHANE_COW.get().create(world);
-//    }
 
     @Override
     public MethaneCowEntity createChild(ServerWorld world, AgeableEntity mate) {

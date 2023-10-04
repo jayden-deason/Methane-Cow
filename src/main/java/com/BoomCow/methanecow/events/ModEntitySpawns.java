@@ -16,26 +16,6 @@ import java.util.List;
 @Mod.EventBusSubscriber(modid = MethaneCow.MOD_ID, bus = Mod.EventBusSubscriber.Bus.FORGE)
 public class ModEntitySpawns {
 
-//    @SubscribeEvent
-//    public static void spawnEntities(FMLLoadCompleteEvent event){
-//        for (Biome biome : ForgeRegistries.BIOMES) {
-//            if (biome.getCategory() == Biome.Category.NETHER){
-//
-//            }
-//            else if (biome.getCategory() == Biome.Category.THEEND){
-//
-//            }
-//            else {
-//                if (biome.getCategory() != Biome.Category.OCEAN){
-//                    biome.getSpawns(EntityClassification.CREATURE)
-//                            .add(new Biome.SpawnListEntry(ModEntityTypes.METHANE_COW.get(), 10, 2, 4));
-//                }
-//
-//            }
-//        }
-//    }
-
-
     @SubscribeEvent
     public static void onBiomeLoad(BiomeLoadingEvent event) {
         EntityType<CowEntity> entityToFind = EntityType.COW;
