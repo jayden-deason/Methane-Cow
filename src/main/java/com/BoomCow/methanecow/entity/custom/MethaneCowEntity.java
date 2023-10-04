@@ -1,6 +1,8 @@
 package com.BoomCow.methanecow.entity.custom;
 
+import com.BoomCow.methanecow.entity.ModEntityTypes;
 import com.BoomCow.methanecow.util.ModSoundEvents;
+import net.minecraft.entity.AgeableEntity;
 import net.minecraft.entity.AreaEffectCloudEntity;
 import net.minecraft.entity.EntityType;
 import net.minecraft.entity.passive.CowEntity;
@@ -11,6 +13,7 @@ import net.minecraft.potion.EffectInstance;
 import net.minecraft.util.*;
 import net.minecraft.world.Explosion;
 import net.minecraft.world.World;
+import net.minecraft.world.server.ServerWorld;
 
 import javax.annotation.Nullable;
 import java.util.Collection;
@@ -32,12 +35,12 @@ public class MethaneCowEntity extends CowEntity {
     @Override
     public void playAmbientSound() {
         int i = (int) (Math.random() * 100) + 1;
-        if(i<10)
+        if(i<80)
             this.playSound(SoundEvents.ENTITY_COW_AMBIENT, 0.8F, 1.0F);
         else {
             this.playSound(ModSoundEvents.FART.get(), 10.0F, 0.2F);
             int j = (int) (Math.random() * 100) + 1;
-            if(j<99)
+            if(j<=1)
                 this.ignite();
         }
     }
@@ -131,6 +134,16 @@ public class MethaneCowEntity extends CowEntity {
             this.world.addEntity(areaeffectcloudentity);
         }
 
+    }
+
+//    @Override
+//    public MethaneCowEntity onChildSpawnFromBreeding(ServerWorld world, AgeableEntity entity) {
+//        return ModEntityTypes.METHANE_COW.get().create(world);
+//    }
+
+    @Override
+    public MethaneCowEntity createChild(ServerWorld world, AgeableEntity mate) {
+        return ModEntityTypes.METHANE_COW.get().create(world);
     }
 
 }

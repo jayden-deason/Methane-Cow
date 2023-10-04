@@ -1,7 +1,7 @@
 package com.BoomCow.methanecow.entity;
 
 import com.BoomCow.methanecow.MethaneCow;
-import com.BoomCow.methanecow.entity.custom.BabyMethaneCowEntity;
+//import com.BoomCow.methanecow.entity.custom.BabyMethaneCowEntity;
 import com.BoomCow.methanecow.entity.custom.MethaneCowEntity;
 import net.minecraft.entity.Entity;
 import net.minecraft.entity.EntityClassification;
@@ -21,10 +21,10 @@ public class ModEntityTypes {
                     EntityClassification.CREATURE).size(0.9f, 1.4f).build(new ResourceLocation(MethaneCow.MOD_ID,
                     "methane_cow").toString()));
 
-    public static final RegistryObject<EntityType<BabyMethaneCowEntity>> BABY_METHANE_COW =
-            ENTITY_TYPES.register("baby_methane_cow", () -> EntityType.Builder.create(BabyMethaneCowEntity::new,
-                    EntityClassification.CREATURE).size(0.9f, 1.4f).build(new ResourceLocation(MethaneCow.MOD_ID,
-                    "baby_methane_cow").toString()));
+//    public static final RegistryObject<EntityType<BabyMethaneCowEntity>> BABY_METHANE_COW =
+//            ENTITY_TYPES.register("baby_methane_cow", () -> EntityType.Builder.create(BabyMethaneCowEntity::new,
+//                    EntityClassification.CREATURE).size(0.9f, 1.4f).build(new ResourceLocation(MethaneCow.MOD_ID,
+//                    "baby_methane_cow").toString()));
 
     public static void register(IEventBus eventBus) {
         ENTITY_TYPES.register(eventBus);
