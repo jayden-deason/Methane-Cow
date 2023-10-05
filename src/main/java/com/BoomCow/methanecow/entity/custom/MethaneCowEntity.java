@@ -17,7 +17,6 @@ import net.minecraft.world.World;
 import net.minecraft.world.server.ServerWorld;
 
 import javax.annotation.Nullable;
-import java.util.Collection;
 
 public class MethaneCowEntity extends CowEntity {
     private int lastActiveTime;
