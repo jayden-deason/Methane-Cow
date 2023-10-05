@@ -17,6 +17,7 @@ import net.minecraft.world.World;
 import net.minecraft.world.server.ServerWorld;
 
 import javax.annotation.Nullable;
+import java.util.Collection;
 
 public class MethaneCowEntity extends CowEntity {
     private int lastActiveTime;
@@ -35,7 +36,7 @@ public class MethaneCowEntity extends CowEntity {
     @Override
     public void playAmbientSound() {
         int i = (int) (Math.random() * 100) + 1;
-        if(i<80) {
+        if(i<95) {
             if (this.isChild()) {
                 this.playSound(ModSoundEvents.FART.get(), 1.0F, 2.0F);
             }
@@ -89,8 +90,6 @@ public class MethaneCowEntity extends CowEntity {
             return super.getEntityInteractionResult(playerIn, hand);
         }
     }
-
-
 
     public void tick() {
         if (this.isAlive()) {
