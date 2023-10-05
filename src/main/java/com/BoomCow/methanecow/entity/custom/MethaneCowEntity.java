@@ -1,5 +1,6 @@
 package com.BoomCow.methanecow.entity.custom;
 
+import com.BoomCow.methanecow.effect.ModEffects;
 import com.BoomCow.methanecow.entity.ModEntityTypes;
 import com.BoomCow.methanecow.util.ModSoundEvents;
 import net.minecraft.entity.AgeableEntity;
@@ -7,8 +8,10 @@ import net.minecraft.entity.AreaEffectCloudEntity;
 import net.minecraft.entity.EntityType;
 import net.minecraft.entity.passive.CowEntity;
 import net.minecraft.entity.player.PlayerEntity;
+import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
 import net.minecraft.item.Items;
+import net.minecraft.potion.Effect;
 import net.minecraft.potion.EffectInstance;
 import net.minecraft.potion.Effects;
 import net.minecraft.util.*;
@@ -17,6 +20,8 @@ import net.minecraft.world.World;
 import net.minecraft.world.server.ServerWorld;
 
 import javax.annotation.Nullable;
+import java.util.Arrays;
+import java.util.List;
 
 public class MethaneCowEntity extends CowEntity {
     private int lastActiveTime;
@@ -27,6 +32,20 @@ public class MethaneCowEntity extends CowEntity {
     private int fuseTime = 30;
     private int explosionRadius = 3;
 
+
+
+    private Effect typeFed;
+
+
+    private static final List<Item> FOOD_ITEMS = Arrays.asList(
+            Items.WHEAT,
+            Items.GOLDEN_CARROT,
+            Items.GOLDEN_APPLE,
+            Items.ENCHANTED_GOLDEN_APPLE,
+            Items.BEETROOT,
+            Items.RABBIT_FOOT
+    );
+
     public MethaneCowEntity(EntityType<? extends CowEntity> type, World world) {
         super(type, world);
     }
@@ -34,8 +53,12 @@ public class MethaneCowEntity extends CowEntity {
 
     @Override
     public void playAmbientSound() {
+        int fartChance = 5; // 5% chance of farting
+//        if(this.getActivePotionEffects().iterator().next().getPotion() == ModEffects.FED.get()){
+//            fartChance = 20;
+//        }
         int i = (int) (Math.random() * 100) + 1;
-        if(i<95) {
+        if(i<(100-fartChance)) {
             if (this.isChild()) {
                 this.playSound(ModSoundEvents.FART.get(), 1.0F, 2.0F);
             }
@@ -59,7 +82,6 @@ public class MethaneCowEntity extends CowEntity {
     }
 
 
-
     @Nullable
     @Override
     protected SoundEvent getDeathSound() {
@@ -70,6 +92,7 @@ public class MethaneCowEntity extends CowEntity {
     @Override
     public ActionResultType getEntityInteractionResult(PlayerEntity playerIn, Hand hand) {
         ItemStack itemstack = playerIn.getHeldItem(hand);
+        int i = this.getGrowingAge();
         if (itemstack.getItem() == Items.BUCKET && !this.isChild()) {
             playerIn.playSound(SoundEvents.ENTITY_COW_MILK, 1.0F, 1.0F);
             ItemStack itemstack1 = DrinkHelper.fill(itemstack, playerIn, Items.MILK_BUCKET.getDefaultInstance());
@@ -85,10 +108,41 @@ public class MethaneCowEntity extends CowEntity {
             }
 
             return ActionResultType.func_233537_a_(this.world.isRemote);
-        } else {
+        } else if (!this.world.isRemote && FOOD_ITEMS.contains(itemstack.getItem())) {
+            this.consumeItemFromStack(playerIn, itemstack);
+            EffectInstance instance = new EffectInstance(ModEffects.FED.get(), 12000, 0, false, true);
+            this.addPotionEffect(instance);
+            if(itemstack.getItem() == Items.GOLDEN_CARROT){
+                typeFed = Effects.NIGHT_VISION;
+            }
+            if(itemstack.getItem() == Items.GOLDEN_APPLE){
+                typeFed = Effects.ABSORPTION;
+            }
+            if(itemstack.getItem() == Items.ENCHANTED_GOLDEN_APPLE){
+                typeFed = Effects.REGENERATION;
+            }
+            if(itemstack.getItem() == Items.BEETROOT){
+                typeFed = Effects.SPEED;
+            }
+            if(itemstack.getItem() == Items.RABBIT_FOOT){
+                typeFed = Effects.JUMP_BOOST;
+            }
+
+            return ActionResultType.SUCCESS;
+        }
+
+
+
+        else {
             return super.getEntityInteractionResult(playerIn, hand);
         }
     }
+
+    @Override
+    public boolean isBreedingItem(ItemStack stack) {
+        return FOOD_ITEMS.contains(stack.getItem());
+    }
+
 
     public void tick() {
         if (this.isAlive()) {
@@ -139,7 +193,13 @@ public class MethaneCowEntity extends CowEntity {
     }
 
     private void spawnLingeringCloud() {
-        EffectInstance collection = new EffectInstance(Effects.POISON, 100, 0, false, false);
+        EffectInstance collection;
+        if(typeFed != null && this.getActivePotionEffects().iterator().next().getPotion() == ModEffects.FED.get()){
+             collection = new EffectInstance(typeFed, 200, 0, false, false);
+        }else{
+             collection = new EffectInstance(Effects.POISON, 100, 0, false, false);
+        }
+
             AreaEffectCloudEntity areaeffectcloudentity = new AreaEffectCloudEntity(this.world, this.getPosX(), this.getPosY(), this.getPosZ());
             areaeffectcloudentity.setRadius(5F);
             areaeffectcloudentity.setRadiusOnUse(-0.5F);
@@ -161,6 +221,9 @@ public class MethaneCowEntity extends CowEntity {
 
     }
 
+    public Effect getTypeFed(){
+        return typeFed;
+    }
     @Override
     public MethaneCowEntity createChild(ServerWorld world, AgeableEntity mate) {
         return ModEntityTypes.METHANE_COW.get().create(world);
