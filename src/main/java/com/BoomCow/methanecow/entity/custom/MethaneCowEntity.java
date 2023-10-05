@@ -53,15 +53,17 @@ public class MethaneCowEntity extends CowEntity {
                 this.playSound(ModSoundEvents.FART.get(), 10.0F, 0.2F);
             }
             int j = (int) (Math.random() * 100) + 1;
-            if(j<=1)
+            if(j<=2)
                 this.ignite();
         }
     }
 
+
+
     @Nullable
     @Override
     protected SoundEvent getDeathSound() {
-        super.playSound(ModSoundEvents.FART.get(), 0.2F, 1.0F);
+        this.playSound(ModSoundEvents.FART.get(), 0.2F, 1.0F);
         return null;
     }
 
@@ -99,7 +101,8 @@ public class MethaneCowEntity extends CowEntity {
 
             int i = this.cowState;
             if (i > 0 && this.timeSinceIgnited == 0) {
-                this.playSound(SoundEvents.ENTITY_CREEPER_PRIMED, 1.0F, 0.5F);
+                this.playSound(ModSoundEvents.BOOM_FART.get(), 10.0F, 1.0F);
+
             }
 
             this.timeSinceIgnited += i;
@@ -140,7 +143,7 @@ public class MethaneCowEntity extends CowEntity {
     private void spawnLingeringCloud() {
         EffectInstance collection = new EffectInstance(Effects.POISON, 100, 0, false, false);
             AreaEffectCloudEntity areaeffectcloudentity = new AreaEffectCloudEntity(this.world, this.getPosX(), this.getPosY(), this.getPosZ());
-            areaeffectcloudentity.setRadius(10F);
+            areaeffectcloudentity.setRadius(5F);
             areaeffectcloudentity.setRadiusOnUse(-0.5F);
             areaeffectcloudentity.setWaitTime(10);
             areaeffectcloudentity.setDuration(areaeffectcloudentity.getDuration() / 2);
@@ -149,6 +152,16 @@ public class MethaneCowEntity extends CowEntity {
             this.getEntityWorld().addEntity(areaeffectcloudentity);
         }
 
+    @Override
+    public void onDeath(DamageSource source){
+        if(!this.world.isRemote)
+            if(source.isExplosion()){
+                this.setHealth(1.0F);
+                this.ignite();
+        }
+
+
+    }
 
     @Override
     public MethaneCowEntity createChild(ServerWorld world, AgeableEntity mate) {

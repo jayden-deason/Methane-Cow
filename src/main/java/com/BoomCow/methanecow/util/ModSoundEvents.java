@@ -15,6 +15,7 @@ public class ModSoundEvents {
             DeferredRegister.create(ForgeRegistries.SOUND_EVENTS, MethaneCow.MOD_ID);
 
     public static final RegistryObject<SoundEvent> FART = registerSoundEvent("fart");
+    public static final RegistryObject<SoundEvent> BOOM_FART = registerSoundEvent("boom-fart");
     private static RegistryObject<SoundEvent> registerSoundEvent(String name) {
         return SOUND_EVENTS.register(name, () -> new SoundEvent(new ResourceLocation(MethaneCow.MOD_ID, name)));
     }

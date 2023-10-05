@@ -7,5 +7,14 @@
         "volume": 0.8
       }
     ]
+  },
+  "boom-fart": {
+    "category": "neutral",
+    "sounds": [
+      {
+        "name": "methanecow:boom-fart",
+        "volume": 0.8
+      }
+    ]
   }
 }
