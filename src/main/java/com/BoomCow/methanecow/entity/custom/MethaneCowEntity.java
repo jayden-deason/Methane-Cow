@@ -35,9 +35,10 @@ public class MethaneCowEntity extends CowEntity {
     @Override
     public void playAmbientSound() {
         int i = (int) (Math.random() * 100) + 1;
-        if(i<95) {
+        int fartChance = 1;
+        if(i < (100 - fartChance)){
             if (this.isChild()) {
-                this.playSound(ModSoundEvents.FART.get(), 1.0F, 2.0F);
+                this.playSound(SoundEvents.ENTITY_COW_AMBIENT, 1.0F, 1.2F);
             }
             else{
                 this.playSound(SoundEvents.ENTITY_COW_AMBIENT, 0.8F, 1.0F);
@@ -50,10 +51,10 @@ public class MethaneCowEntity extends CowEntity {
             }
             else{
                 this.spawnLingeringCloud();
-                this.playSound(ModSoundEvents.FART.get(), 10.0F, 0.2F);
+                this.playSound(ModSoundEvents.FART.get(), 5.0F, 0.2F);
             }
-            int j = (int) (Math.random() * 100) + 1;
-            if(j<=2)
+            int j = (int) (Math.random() * 1000) + 1;
+            if(j <= 1)
                 this.ignite();
         }
     }
