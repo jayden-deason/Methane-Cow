@@ -1,3 +1,30 @@
 {
-  "item.methanecow.methane_cow_spawn_egg": "Methane Cow Spawn Egg"
+  "item.methanecow.methane_cow_spawn_egg": "Methane Cow Spawn Egg",
+
+  "effect.methanecow.speed_cow": "Speed Cow",
+  "effect.methanecow.slowness_cow": "Slowness Cow",
+  "effect.methanecow.haste_cow": "Haste Cow",
+  "effect.methanecow.mining_fatigue_cow": "Mining Fatigue Cow",
+  "effect.methanecow.strength_cow": "Strength Cow",
+  "effect.methanecow.instant_health_cow": "Instant Health Cow",
+  "effect.methanecow.instant_damage_cow": "Instant Damage Cow",
+  "effect.methanecow.jump_boost_cow": "Jump Boost Cow",
+  "effect.methanecow.nausea_cow": "Nausea Cow",
+  "effect.methanecow.regeneration_cow": "Regeneration Cow",
+  "effect.methanecow.resistance_cow": "Resistance Cow",
+  "effect.methanecow.fire_resistance_cow": "Fire Resistance Cow",
+  "effect.methanecow.water_breathing_cow": "Water Breathing Cow",
+  "effect.methanecow.invisibility_cow": "Invisibility Cow",
+  "effect.methanecow.blindness_cow": "Blindness Cow",
+  "effect.methanecow.night_vision_cow": "Night Vision Cow",
+  "effect.methanecow.hunger_cow": "Hunger Cow",
+  "effect.methanecow.weakness_cow": "Weakness Cow",
+  "effect.methanecow.poison_cow": "Poison Cow",
+  "effect.methanecow.wither_cow": "Wither Cow",
+  "effect.methanecow.saturation_cow": "Saturation Cow",
+  "effect.methanecow.glowing_cow": "Glowing Cow",
+  "effect.methanecow.levitation_cow": "Levitation Cow",
+  "effect.methanecow.luck_cow": "Luck Cow",
+  "effect.methanecow.unluck_cow": "Unluck Cow",
+  "effect.methanecow.slow_falling_cow": "Slow Falling Cow"
 }

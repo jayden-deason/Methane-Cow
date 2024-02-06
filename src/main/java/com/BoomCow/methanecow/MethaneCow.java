@@ -1,5 +1,6 @@
 package com.BoomCow.methanecow;
 
+import com.BoomCow.methanecow.effect.ModEffects;
 import com.BoomCow.methanecow.entity.ModEntityTypes;
 import com.BoomCow.methanecow.item.ModItems;
 import com.BoomCow.methanecow.util.ModSoundEvents;
@@ -40,6 +41,7 @@ public class MethaneCow
         ModItems.register(eventBus);
 
         ModSoundEvents.register(eventBus);
+        ModEffects.register(eventBus);
 
 
         eventBus.addListener(this::setup);
