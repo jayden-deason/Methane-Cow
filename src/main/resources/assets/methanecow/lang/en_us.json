@@ -1,6 +1,136 @@
 {
   "item.methanecow.methane_cow_spawn_egg": "Methane Cow Spawn Egg",
 
+  "item.minecraft.potion.effect.speed_cow": "Speed Cow Potion",
+  "item.minecraft.splash_potion.effect.speed_cow": "Splash Potion of Speed Cow",
+  "item.minecraft.lingering_potion.effect.speed_cow": "Lingering Potion of Speed Cow",
+  "item.minecraft.tipped_arrow.effect.speed_cow": "Arrow of Speed Cow",
+
+  "item.minecraft.potion.effect.slowness_cow": "Slowness Cow Potion",
+  "item.minecraft.splash_potion.effect.slowness_cow": "Splash Potion of Slowness Cow",
+  "item.minecraft.lingering_potion.effect.slowness_cow": "Lingering Potion of Slowness Cow",
+  "item.minecraft.tipped_arrow.effect.slowness_cow": "Arrow of Slowness Cow",
+
+  "item.minecraft.potion.effect.haste_cow": "Haste Cow Potion",
+  "item.minecraft.splash_potion.effect.haste_cow": "Splash Potion of Haste Cow",
+  "item.minecraft.lingering_potion.effect.haste_cow": "Lingering Potion of Haste Cow",
+  "item.minecraft.tipped_arrow.effect.haste_cow": "Arrow of Haste Cow",
+
+  "item.minecraft.potion.effect.mining_fatigue_cow": "Mining Fatigue Cow Potion",
+  "item.minecraft.splash_potion.effect.mining_fatigue_cow": "Splash Potion of Mining Fatigue Cow",
+  "item.minecraft.lingering_potion.effect.mining_fatigue_cow": "Lingering Potion of Mining Fatigue Cow",
+  "item.minecraft.tipped_arrow.effect.mining_fatigue_cow": "Arrow of Mining Fatigue Cow",
+
+  "item.minecraft.potion.effect.strength_cow": "Strength Cow Potion",
+  "item.minecraft.splash_potion.effect.strength_cow": "Splash Potion of Strength Cow",
+  "item.minecraft.lingering_potion.effect.strength_cow": "Lingering Potion of Strength Cow",
+  "item.minecraft.tipped_arrow.effect.strength_cow": "Arrow of Strength Cow",
+
+  "item.minecraft.potion.effect.instant_health_cow": "Instant Health Cow Potion",
+  "item.minecraft.splash_potion.effect.instant_health_cow": "Splash Potion of Instant Health Cow",
+  "item.minecraft.lingering_potion.effect.instant_health_cow": "Lingering Potion of Instant Health Cow",
+  "item.minecraft.tipped_arrow.effect.instant_health_cow": "Arrow of Instant Health Cow",
+
+  "item.minecraft.potion.effect.instant_damage_cow": "Instant Damage Cow Potion",
+  "item.minecraft.splash_potion.effect.instant_damage_cow": "Splash Potion of Instant Damage Cow",
+  "item.minecraft.lingering_potion.effect.instant_damage_cow": "Lingering Potion of Instant Damage Cow",
+  "item.minecraft.tipped_arrow.effect.instant_damage_cow": "Arrow of Instant Damage Cow",
+
+  "item.minecraft.potion.effect.jump_boost_cow": "Jump Boost Cow Potion",
+  "item.minecraft.splash_potion.effect.jump_boost_cow": "Splash Potion of Jump Boost Cow",
+  "item.minecraft.lingering_potion.effect.jump_boost_cow": "Lingering Potion of Jump Boost Cow",
+  "item.minecraft.tipped_arrow.effect.jump_boost_cow": "Arrow of Jump Boost Cow",
+
+  "item.minecraft.potion.effect.nausea_cow": "Nausea Cow Potion",
+  "item.minecraft.splash_potion.effect.nausea_cow": "Splash Potion of Nausea Cow",
+  "item.minecraft.lingering_potion.effect.nausea_cow": "Lingering Potion of Nausea Cow",
+  "item.minecraft.tipped_arrow.effect.nausea_cow": "Arrow of Nausea Cow",
+
+  "item.minecraft.potion.effect.regeneration_cow": "Regeneration Cow Potion",
+  "item.minecraft.splash_potion.effect.regeneration_cow": "Splash Potion of Regeneration Cow",
+  "item.minecraft.lingering_potion.effect.regeneration_cow": "Lingering Potion of Regeneration Cow",
+  "item.minecraft.tipped_arrow.effect.regeneration_cow": "Arrow of Regeneration Cow",
+
+  "item.minecraft.potion.effect.resistance_cow": "Resistance Cow Potion",
+  "item.minecraft.splash_potion.effect.resistance_cow": "Splash Potion of Resistance Cow",
+  "item.minecraft.lingering_potion.effect.resistance_cow": "Lingering Potion of Resistance Cow",
+  "item.minecraft.tipped_arrow.effect.resistance_cow": "Arrow of Resistance Cow",
+
+  "item.minecraft.potion.effect.fire_resistance_cow": "Fire Resistance Cow Potion",
+  "item.minecraft.splash_potion.effect.fire_resistance_cow": "Splash Potion of Fire Resistance Cow",
+  "item.minecraft.lingering_potion.effect.fire_resistance_cow": "Lingering Potion of Fire Resistance Cow",
+  "item.minecraft.tipped_arrow.effect.fire_resistance_cow": "Arrow of Fire Resistance Cow",
+
+  "item.minecraft.potion.effect.water_breathing_cow": "Water Breathing Cow Potion",
+  "item.minecraft.splash_potion.effect.water_breathing_cow": "Splash Potion of Water Breathing Cow",
+  "item.minecraft.lingering_potion.effect.water_breathing_cow": "Lingering Potion of Water Breathing Cow",
+  "item.minecraft.tipped_arrow.effect.water_breathing_cow": "Arrow of Water Breathing Cow",
+
+  "item.minecraft.potion.effect.invisibility_cow": "Invisibility Cow Potion",
+  "item.minecraft.splash_potion.effect.invisibility_cow": "Splash Potion of Invisibility Cow",
+  "item.minecraft.lingering_potion.effect.invisibility_cow": "Lingering Potion of Invisibility Cow",
+  "item.minecraft.tipped_arrow.effect.invisibility_cow": "Arrow of Invisibility Cow",
+
+  "item.minecraft.potion.effect.blindness_cow": "Blindness Cow Potion",
+  "item.minecraft.splash_potion.effect.blindness_cow": "Splash Potion of Blindness Cow",
+  "item.minecraft.lingering_potion.effect.blindness_cow": "Lingering Potion of Blindness Cow",
+  "item.minecraft.tipped_arrow.effect.blindness_cow": "Arrow of Blindness Cow",
+
+  "item.minecraft.potion.effect.night_vision_cow": "Night Vision Cow Potion",
+  "item.minecraft.splash_potion.effect.night_vision_cow": "Splash Potion of Night Vision Cow",
+  "item.minecraft.lingering_potion.effect.night_vision_cow": "Lingering Potion of Night Vision Cow",
+  "item.minecraft.tipped_arrow.effect.night_vision_cow": "Arrow of Night Vision Cow",
+
+  "item.minecraft.potion.effect.hunger_cow": "Hunger Cow Potion",
+  "item.minecraft.splash_potion.effect.hunger_cow": "Splash Potion of Hunger Cow",
+  "item.minecraft.lingering_potion.effect.hunger_cow": "Lingering Potion of Hunger Cow",
+  "item.minecraft.tipped_arrow.effect.hunger_cow": "Arrow of Hunger Cow",
+
+  "item.minecraft.potion.effect.weakness_cow": "Weakness Cow Potion",
+  "item.minecraft.splash_potion.effect.weakness_cow": "Splash Potion of Weakness Cow",
+  "item.minecraft.lingering_potion.effect.weakness_cow": "Lingering Potion of Weakness Cow",
+  "item.minecraft.tipped_arrow.effect.weakness_cow": "Arrow of Weakness Cow",
+
+  "item.minecraft.potion.effect.poison_cow": "Poison Cow Potion",
+  "item.minecraft.splash_potion.effect.poison_cow": "Splash Potion of Poison Cow",
+  "item.minecraft.lingering_potion.effect.poison_cow": "Lingering Potion of Poison Cow",
+  "item.minecraft.tipped_arrow.effect.poison_cow": "Arrow of Poison Cow",
+
+  "item.minecraft.potion.effect.wither_cow": "Wither Cow Potion",
+  "item.minecraft.splash_potion.effect.wither_cow": "Splash Potion of Wither Cow",
+  "item.minecraft.lingering_potion.effect.wither_cow": "Lingering Potion of Wither Cow",
+  "item.minecraft.tipped_arrow.effect.wither_cow": "Arrow of Wither Cow",
+
+  "item.minecraft.potion.effect.saturation_cow": "Saturation Cow Potion",
+  "item.minecraft.splash_potion.effect.saturation_cow": "Splash Potion of Saturation Cow",
+  "item.minecraft.lingering_potion.effect.saturation_cow": "Lingering Potion of Saturation Cow",
+  "item.minecraft.tipped_arrow.effect.saturation_cow": "Arrow of Saturation Cow",
+
+  "item.minecraft.potion.effect.glowing_cow": "Glowing Cow Potion",
+  "item.minecraft.splash_potion.effect.glowing_cow": "Splash Potion of Glowing Cow",
+  "item.minecraft.lingering_potion.effect.glowing_cow": "Lingering Potion of Glowing Cow",
+  "item.minecraft.tipped_arrow.effect.glowing_cow": "Arrow of Glowing Cow",
+
+  "item.minecraft.potion.effect.levitation_cow": "Levitation Cow Potion",
+  "item.minecraft.splash_potion.effect.levitation_cow": "Splash Potion of Levitation Cow",
+  "item.minecraft.lingering_potion.effect.levitation_cow": "Lingering Potion of Levitation Cow",
+  "item.minecraft.tipped_arrow.effect.levitation_cow": "Arrow of Levitation Cow",
+
+  "item.minecraft.potion.effect.luck_cow": "Luck Cow Potion",
+  "item.minecraft.splash_potion.effect.luck_cow": "Splash Potion of Luck Cow",
+  "item.minecraft.lingering_potion.effect.luck_cow": "Lingering Potion of Luck Cow",
+  "item.minecraft.tipped_arrow.effect.luck_cow": "Arrow of Luck Cow",
+
+  "item.minecraft.potion.effect.unluck_cow": "Unluck Cow Potion",
+  "item.minecraft.splash_potion.effect.unluck_cow": "Splash Potion of Unluck Cow",
+  "item.minecraft.lingering_potion.effect.unluck_cow": "Lingering Potion of Unluck Cow",
+  "item.minecraft.tipped_arrow.effect.unluck_cow": "Arrow of Unluck Cow",
+
+  "item.minecraft.potion.effect.slow_falling_cow": "Slow Falling Cow Potion",
+  "item.minecraft.splash_potion.effect.slow_falling_cow": "Splash Potion of Slow Falling Cow",
+  "item.minecraft.lingering_potion.effect.slow_falling_cow": "Lingering Potion of Slow Falling Cow",
+  "item.minecraft.tipped_arrow.effect.slow_falling_cow": "Arrow of Slow Falling Cow",
+
   "effect.methanecow.speed_cow": "Speed Cow",
   "effect.methanecow.slowness_cow": "Slowness Cow",
   "effect.methanecow.haste_cow": "Haste Cow",

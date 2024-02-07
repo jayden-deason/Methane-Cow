@@ -3,6 +3,7 @@ package com.BoomCow.methanecow;
 import com.BoomCow.methanecow.effect.ModEffects;
 import com.BoomCow.methanecow.entity.ModEntityTypes;
 import com.BoomCow.methanecow.item.ModItems;
+import com.BoomCow.methanecow.potions.ModPotions;
 import com.BoomCow.methanecow.util.ModSoundEvents;
 import net.minecraft.block.Block;
 import net.minecraft.block.Blocks;
@@ -42,6 +43,7 @@ public class MethaneCow
 
         ModSoundEvents.register(eventBus);
         ModEffects.register(eventBus);
+        ModPotions.register(eventBus);
 
 
         eventBus.addListener(this::setup);
