@@ -14,7 +14,7 @@ public class ModEffect extends Effect {
         super(typeIn, liquidColorIn);
     }
 
-    @Override
+    /*@Override
     public void performEffect(LivingEntity entityLivingBaseIn, int amplifier) {
         if (this == ModEffects.REGENERATION_COW.get()) {
             if (entityLivingBaseIn.getHealth() < entityLivingBaseIn.getMaxHealth()) {
@@ -86,5 +86,5 @@ public class ModEffect extends Effect {
         } else {
             return this == ModEffects.HUNGER_COW.get();
         }
-    }
+    }*/
 }

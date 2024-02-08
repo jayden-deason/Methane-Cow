@@ -158,8 +158,6 @@ public class MethaneCowEntity extends CowEntity {
                 this.setHealth(1.0F);
                 this.ignite();
         }
-
-
     }
 
     @Override
@@ -167,4 +165,11 @@ public class MethaneCowEntity extends CowEntity {
         return ModEntityTypes.METHANE_COW.get().create(world);
     }
 
+    @Override
+    public boolean addPotionEffect(EffectInstance effectInstanceIn) {
+        if (effectInstanceIn.getPotion() == Effects.POISON) {
+            return false;
+        }
+        return super.addPotionEffect(effectInstanceIn);
+    }
 }

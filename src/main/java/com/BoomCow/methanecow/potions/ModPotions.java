@@ -3,6 +3,7 @@ package com.BoomCow.methanecow.potions;
 import com.BoomCow.methanecow.MethaneCow;
 import com.BoomCow.methanecow.effect.ModEffects;
 import net.minecraft.potion.EffectInstance;
+import net.minecraft.potion.Effects;
 import net.minecraft.potion.Potion;
 import net.minecraftforge.eventbus.api.IEventBus;
 import net.minecraftforge.fml.RegistryObject;
@@ -13,6 +14,7 @@ public class ModPotions {
     public static final DeferredRegister<Potion> POTIONS =
             DeferredRegister.create(ForgeRegistries.POTION_TYPES, MethaneCow.MOD_ID);
 
+    // Registering Custom Potions
     public static final RegistryObject<Potion> SPEED_COW_POTION = POTIONS.register("speed_cow",
             () -> new Potion(new EffectInstance(ModEffects.SPEED_COW.get(), 200, 0)));
     public static final RegistryObject<Potion> SLOWNESS_COW_POTION = POTIONS.register("slowness_cow",
@@ -66,6 +68,35 @@ public class ModPotions {
     public static final RegistryObject<Potion> SLOW_FALLING_COW_POTION = POTIONS.register("slow_falling_cow",
             () -> new Potion(new EffectInstance(ModEffects.SLOW_FALLING_COW.get(), 200, 0)));
 
+    // Registering Potions for Vanilla Effects
+    public static final RegistryObject<Potion> HASTE = POTIONS.register("haste",
+            () -> new Potion(new EffectInstance(Effects.HASTE, 200, 0)));
+    public static final RegistryObject<Potion> MINING_FATIGUE = POTIONS.register("mining_fatigue",
+            () -> new Potion(new EffectInstance(Effects.MINING_FATIGUE, 200, 0)));
+    public static final RegistryObject<Potion> INSTANT_HEALTH = POTIONS.register("instant_health",
+            () -> new Potion(new EffectInstance(Effects.INSTANT_HEALTH, 1, 0)));
+    public static final RegistryObject<Potion> INSTANT_DAMAGE = POTIONS.register("instant_damage",
+            () -> new Potion(new EffectInstance(Effects.INSTANT_DAMAGE, 1, 0)));
+    public static final RegistryObject<Potion> JUMP_BOOST = POTIONS.register("jump_boost",
+            () -> new Potion(new EffectInstance(Effects.JUMP_BOOST, 200, 0)));
+    public static final RegistryObject<Potion> NAUSEA = POTIONS.register("nausea",
+            () -> new Potion(new EffectInstance(Effects.NAUSEA, 200, 0)));
+    public static final RegistryObject<Potion> RESISTANCE = POTIONS.register("resistance",
+            () -> new Potion(new EffectInstance(Effects.RESISTANCE, 200, 0)));
+    public static final RegistryObject<Potion> BLINDNESS = POTIONS.register("blindness",
+            () -> new Potion(new EffectInstance(Effects.BLINDNESS, 200, 0)));
+    public static final RegistryObject<Potion> HUNGER = POTIONS.register("hunger",
+            () -> new Potion(new EffectInstance(Effects.HUNGER, 200, 0)));
+    public static final RegistryObject<Potion> WITHER = POTIONS.register("wither",
+            () -> new Potion(new EffectInstance(Effects.WITHER, 200, 0)));
+    public static final RegistryObject<Potion> SATURATION = POTIONS.register("saturation",
+            () -> new Potion(new EffectInstance(Effects.SATURATION, 200, 0)));
+    public static final RegistryObject<Potion> GLOWING = POTIONS.register("glowing",
+            () -> new Potion(new EffectInstance(Effects.GLOWING, 200, 0)));
+    public static final RegistryObject<Potion> LEVITATION = POTIONS.register("levitation",
+            () -> new Potion(new EffectInstance(Effects.LEVITATION, 200, 0)));
+    public static final RegistryObject<Potion> UNLUCK = POTIONS.register("unluck",
+            () -> new Potion(new EffectInstance(Effects.UNLUCK, 200, 0)));
 
     public static void register(IEventBus eventBus) {
         POTIONS.register(eventBus);
