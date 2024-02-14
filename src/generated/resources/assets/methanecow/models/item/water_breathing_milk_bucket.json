@@ -1,0 +1,6 @@
+{
+  "parent": "minecraft:item/generated",
+  "textures": {
+    "layer0": "methanecow:item/water_breathing_milk_bucket"
+  }
+}
