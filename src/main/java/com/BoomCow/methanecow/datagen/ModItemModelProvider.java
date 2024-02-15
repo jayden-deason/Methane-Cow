@@ -41,6 +41,34 @@ public class ModItemModelProvider extends ItemModelProvider {
         simpleItem("luck_milk_bucket");
         simpleItem("unluck_milk_bucket");
         simpleItem("slow_falling_milk_bucket");
+
+        simpleItem("cheese");
+        simpleItem("speed_cheese");
+        simpleItem("slowness_cheese");
+        simpleItem("haste_cheese");
+        simpleItem("mining_fatigue_cheese");
+        simpleItem("strength_cheese");
+        simpleItem("instant_health_cheese");
+        simpleItem("instant_damage_cheese");
+        simpleItem("jump_boost_cheese");
+        simpleItem("nausea_cheese");
+        simpleItem("regeneration_cheese");
+        simpleItem("resistance_cheese");
+        simpleItem("fire_resistance_cheese");
+        simpleItem("water_breathing_cheese");
+        simpleItem("invisibility_cheese");
+        simpleItem("blindness_cheese");
+        simpleItem("night_vision_cheese");
+        simpleItem("hunger_cheese");
+        simpleItem("weakness_cheese");
+        simpleItem("poison_cheese");
+        simpleItem("wither_cheese");
+        simpleItem("saturation_cheese");
+        simpleItem("glowing_cheese");
+        simpleItem("levitation_cheese");
+        simpleItem("luck_cheese");
+        simpleItem("unluck_cheese");
+        simpleItem("slow_falling_cheese");
     }
 
     private ItemModelBuilder simpleItem(String name) {
