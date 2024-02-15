@@ -54,9 +54,11 @@ public class MethaneCowEntity extends CowEntity {
     @Override
     public void playAmbientSound() {
         int fartChance = 5; // 5% chance of farting
-//        if(this.getActivePotionEffects().iterator().next().getPotion() == ModEffects.FED.get()){
-//            fartChance = 20;
-//        }
+        if(this.getActivePotionEffects().size() > 0){
+            if(this.getActivePotionEffects().iterator().next().getPotion() == ModEffects.FED.get()){
+                fartChance = 20;
+            }
+        }
         int i = (int) (Math.random() * 100) + 1;
         if(i<(100-fartChance)) {
             if (this.isChild()) {
@@ -130,6 +132,7 @@ public class MethaneCowEntity extends CowEntity {
 
             return ActionResultType.SUCCESS;
         }
+
 
 
 
@@ -207,6 +210,8 @@ public class MethaneCowEntity extends CowEntity {
             areaeffectcloudentity.setDuration(areaeffectcloudentity.getDuration() / 2);
             areaeffectcloudentity.setRadiusPerTick(-areaeffectcloudentity.getRadius() / (float)areaeffectcloudentity.getDuration());
             areaeffectcloudentity.addEffect(new EffectInstance(collection));
+            // I need to set owner of areaeffectcloudentity to this methanecowentity
+            areaeffectcloudentity.setOwner(this);
             this.getEntityWorld().addEntity(areaeffectcloudentity);
         }
 
@@ -216,7 +221,7 @@ public class MethaneCowEntity extends CowEntity {
             if(source.isExplosion()){
                 this.setHealth(1.0F);
                 this.ignite();
-        }
+            }
 
 
     }
