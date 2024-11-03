@@ -309,5 +309,7 @@
   "effect.methanecow.levitation_cow": "Levitation Cow",
   "effect.methanecow.luck_cow": "Luck Cow",
   "effect.methanecow.unluck_cow": "Unluck Cow",
-  "effect.methanecow.slow_falling_cow": "Slow Falling Cow"
+  "effect.methanecow.slow_falling_cow": "Slow Falling Cow",
+
+  "entity.methanecow.methane_cow": "Methane Cow"
 }
