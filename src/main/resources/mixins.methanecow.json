@@ -1,0 +1,11 @@
+{
+  "required": true,
+  "minVersion": "0.8",
+  "package": "com.BoomCow.methanecow.mixin",
+  "refmap": "mixins.methanecow.refmap.json",
+  "mixins": [
+    "CowEntityMixin"
+  ],
+  "client": [],
+  "server": []
+}

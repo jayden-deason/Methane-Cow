@@ -1,24 +1,28 @@
-package com.BoomCow.methanecow.entity.custom;
+package com.BoomCow.methanecow.mixin;
 
-import com.BoomCow.methanecow.entity.ModEntityTypes;
 import com.BoomCow.methanecow.util.ModSoundEvents;
-import net.minecraft.entity.AgeableEntity;
-import net.minecraft.entity.AreaEffectCloudEntity;
 import net.minecraft.entity.EntityType;
+import net.minecraft.entity.passive.AnimalEntity;
 import net.minecraft.entity.passive.CowEntity;
 import net.minecraft.entity.player.PlayerEntity;
+import net.minecraft.entity.AreaEffectCloudEntity;
 import net.minecraft.item.ItemStack;
 import net.minecraft.item.Items;
 import net.minecraft.potion.EffectInstance;
 import net.minecraft.potion.Effects;
-import net.minecraft.util.*;
+import net.minecraft.util.ActionResultType;
+import net.minecraft.util.DamageSource;
+import net.minecraft.util.Hand;
+import net.minecraft.util.SoundEvents;
 import net.minecraft.world.Explosion;
 import net.minecraft.world.World;
-import net.minecraft.world.server.ServerWorld;
+import org.spongepowered.asm.mixin.Mixin;
+import org.spongepowered.asm.mixin.injection.At;
+import org.spongepowered.asm.mixin.injection.Inject;
+import org.spongepowered.asm.mixin.injection.callback.CallbackInfoReturnable;
 
-import javax.annotation.Nullable;
-
-public class MethaneCowEntity extends CowEntity {
+@Mixin(CowEntity.class)
+public abstract class CowEntityMixin extends AnimalEntity {
     private int lastActiveTime;
     private int timeSinceIgnited;
     private boolean ignited = false;
@@ -27,7 +31,7 @@ public class MethaneCowEntity extends CowEntity {
     private int fuseTime = 30;
     private int explosionRadius = 3;
 
-    public MethaneCowEntity(EntityType<? extends CowEntity> type, World world) {
+    public CowEntityMixin(EntityType<? extends AnimalEntity> type, World world) {
         super(type, world);
     }
 
@@ -57,35 +61,16 @@ public class MethaneCowEntity extends CowEntity {
         }
     }
 
-
-
-    @Nullable
-    @Override
-    protected SoundEvent getDeathSound() {
-        this.playSound(ModSoundEvents.FART.get(), 0.2F, 1.0F);
-        return null;
-    }
-
-    @Override
-    public ActionResultType getEntityInteractionResult(PlayerEntity playerIn, Hand hand) {
-        ItemStack itemstack = playerIn.getHeldItem(hand);
-        if (itemstack.getItem() == Items.BUCKET && !this.isChild()) {
-            playerIn.playSound(SoundEvents.ENTITY_COW_MILK, 1.0F, 1.0F);
-            ItemStack itemstack1 = DrinkHelper.fill(itemstack, playerIn, Items.MILK_BUCKET.getDefaultInstance());
-            playerIn.setHeldItem(hand, itemstack1);
-            return ActionResultType.func_233537_a_(this.world.isRemote);
-        } else if (itemstack.getItem() == Items.FLINT_AND_STEEL) {
+    @Inject(method = "getEntityInteractionResult", at = @At("HEAD"), cancellable = true)
+    public void getEntityInteractionResult(PlayerEntity playerIn, Hand hand, CallbackInfoReturnable<ActionResultType> cir) {
+        ItemStack itemStack = playerIn.getHeldItem(hand);
+        if (itemStack.getItem() == Items.FLINT_AND_STEEL) {
             this.world.playSound(playerIn, this.getPosX(), this.getPosY(), this.getPosZ(), SoundEvents.ITEM_FLINTANDSTEEL_USE, this.getSoundCategory(), 1.0F, this.rand.nextFloat() * 0.4F + 0.8F);
-            if (!this.world.isRemote) {
-                this.ignite();
-                itemstack.damageItem(1, playerIn, (player) -> {
-                    player.sendBreakAnimation(hand);
-                });
-            }
-
-            return ActionResultType.func_233537_a_(this.world.isRemote);
-        } else {
-            return super.getEntityInteractionResult(playerIn, hand);
+            this.ignite();
+            itemStack.damageItem(1, playerIn, (player) -> {
+                player.sendBreakAnimation(hand);
+            });
+            cir.setReturnValue(ActionResultType.func_233537_a_(this.world.isRemote));
         }
     }
 
@@ -112,11 +97,10 @@ public class MethaneCowEntity extends CowEntity {
                 this.explode();
             }
         }
-
         super.tick();
     }
 
-    public void ignite() {
+    private void ignite() {
         this.ignited = true;
     }
 
@@ -139,32 +123,25 @@ public class MethaneCowEntity extends CowEntity {
 
     private void spawnLingeringCloud() {
         EffectInstance collection = new EffectInstance(Effects.POISON, 100, 0, false, false);
-            AreaEffectCloudEntity areaeffectcloudentity = new AreaEffectCloudEntity(this.world, this.getPosX(), this.getPosY(), this.getPosZ());
-            areaeffectcloudentity.setRadius(5F);
-            areaeffectcloudentity.setRadiusOnUse(-0.5F);
-            areaeffectcloudentity.setWaitTime(10);
-            areaeffectcloudentity.setDuration(areaeffectcloudentity.getDuration() / 2);
-            areaeffectcloudentity.setRadiusPerTick(-areaeffectcloudentity.getRadius() / (float)areaeffectcloudentity.getDuration());
-            areaeffectcloudentity.addEffect(new EffectInstance(collection));
-            this.getEntityWorld().addEntity(areaeffectcloudentity);
+        AreaEffectCloudEntity areaeffectcloudentity = new AreaEffectCloudEntity(this.world, this.getPosX(), this.getPosY(), this.getPosZ());
+        areaeffectcloudentity.setRadius(5F);
+        areaeffectcloudentity.setRadiusOnUse(-0.5F);
+        areaeffectcloudentity.setWaitTime(10);
+        areaeffectcloudentity.setDuration(areaeffectcloudentity.getDuration() / 2);
+        areaeffectcloudentity.setRadiusPerTick(-areaeffectcloudentity.getRadius() / (float)areaeffectcloudentity.getDuration());
+        areaeffectcloudentity.addEffect(new EffectInstance(collection));
+        this.getEntityWorld().addEntity(areaeffectcloudentity);
     }
 
-    @Override
     public void onDeath(DamageSource source){
         if(!this.world.isRemote)
             if(source.isExplosion()){
                 this.setHealth(1.0F);
                 this.ignite();
-        }
+            }
         super.onDeath(source);
     }
 
-    @Override
-    public MethaneCowEntity createChild(ServerWorld world, AgeableEntity mate) {
-        return ModEntityTypes.METHANE_COW.get().create(world);
-    }
-
-    @Override
     public boolean addPotionEffect(EffectInstance effectInstanceIn) {
         if (effectInstanceIn.getPotion() == Effects.POISON) {
             return false;
