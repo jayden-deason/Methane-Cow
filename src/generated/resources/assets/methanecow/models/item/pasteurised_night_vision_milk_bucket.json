@@ -1,0 +1,6 @@
+{
+  "parent": "minecraft:item/generated",
+  "textures": {
+    "layer0": "methanecow:item/night_vision_milk_bucket"
+  }
+}
