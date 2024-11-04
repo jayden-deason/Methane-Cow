@@ -42,6 +42,33 @@ public class ModItemModelProvider extends ItemModelProvider {
         simpleItem("unluck_milk_bucket");
         simpleItem("slow_falling_milk_bucket");
 
+        simpleItem("pasteurised_speed_milk_bucket");
+        simpleItem("pasteurised_slowness_milk_bucket");
+        simpleItem("pasteurised_haste_milk_bucket");
+        simpleItem("pasteurised_mining_fatigue_milk_bucket");
+        simpleItem("pasteurised_strength_milk_bucket");
+        simpleItem("pasteurised_instant_health_milk_bucket");
+        simpleItem("pasteurised_instant_damage_milk_bucket");
+        simpleItem("pasteurised_jump_boost_milk_bucket");
+        simpleItem("pasteurised_nausea_milk_bucket");
+        simpleItem("pasteurised_regeneration_milk_bucket");
+        simpleItem("pasteurised_resistance_milk_bucket");
+        simpleItem("pasteurised_fire_resistance_milk_bucket");
+        simpleItem("pasteurised_water_breathing_milk_bucket");
+        simpleItem("pasteurised_invisibility_milk_bucket");
+        simpleItem("pasteurised_blindness_milk_bucket");
+        simpleItem("pasteurised_night_vision_milk_bucket");
+        simpleItem("pasteurised_hunger_milk_bucket");
+        simpleItem("pasteurised_weakness_milk_bucket");
+        simpleItem("pasteurised_poison_milk_bucket");
+        simpleItem("pasteurised_wither_milk_bucket");
+        simpleItem("pasteurised_saturation_milk_bucket");
+        simpleItem("pasteurised_glowing_milk_bucket");
+        simpleItem("pasteurised_levitation_milk_bucket");
+        simpleItem("pasteurised_luck_milk_bucket");
+        simpleItem("pasteurised_unluck_milk_bucket");
+        simpleItem("pasteurised_slow_falling_milk_bucket");
+
         simpleItem("cheese");
         simpleItem("speed_cheese");
         simpleItem("slowness_cheese");
@@ -72,6 +99,10 @@ public class ModItemModelProvider extends ItemModelProvider {
     }
 
     private ItemModelBuilder simpleItem(String name) {
+        if (name.contains("pasteurised")) {
+            return getBuilder(name).parent(getExistingFile(mcLoc("item/generated"))).texture("layer0",
+                    "item/" + name.substring(12));
+        }
         return getBuilder(name).parent(getExistingFile(mcLoc("item/generated"))).texture("layer0",
                 "item/" + name);
     }
