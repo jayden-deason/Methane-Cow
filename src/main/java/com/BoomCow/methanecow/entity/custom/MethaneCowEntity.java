@@ -151,10 +151,11 @@ public class MethaneCowEntity extends CowEntity {
 
     @Override
     public void onDeath(DamageSource source){
-        if(!this.world.isRemote)
-            if(source.isExplosion()){
+        if(!this.world.isRemote) {
+            if(source.isExplosion() || source.equals(DamageSource.IN_FIRE) || source.equals(DamageSource.ON_FIRE)) {
                 this.setHealth(1.0F);
                 this.ignite();
+            }
         }
         super.onDeath(source);
     }

@@ -19,6 +19,9 @@ public class ModItems {
     public static final DeferredRegister<Item> ITEMS =
             DeferredRegister.create(ForgeRegistries.ITEMS, MethaneCow.MOD_ID);
 
+    public static final RegistryObject<Item> CHEESE_CLOTH = ITEMS.register("cheese_cloth", () ->
+            new Item((new Item.Properties()).group(ModItemGroup.METHANECOW)));
+
     public static final RegistryObject<ModSpawnEggItem> METHANE_COW_SPAWN_EGG = ITEMS.register("methane_cow_spawn_egg",
             () -> new ModSpawnEggItem(ModEntityTypes.METHANE_COW, 4470310, 10592673,
                     new Item.Properties().group(ModItemGroup.METHANECOW)));

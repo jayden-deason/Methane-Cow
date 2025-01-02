@@ -96,6 +96,8 @@ public class ModItemModelProvider extends ItemModelProvider {
         simpleItem("luck_cheese");
         simpleItem("unluck_cheese");
         simpleItem("slow_falling_cheese");
+
+        simpleItem("cheese_cloth");
     }
 
     private ItemModelBuilder simpleItem(String name) {
