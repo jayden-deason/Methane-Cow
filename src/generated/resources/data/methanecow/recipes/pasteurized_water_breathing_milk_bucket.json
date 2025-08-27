@@ -1,0 +1,9 @@
+{
+  "type": "minecraft:smelting",
+  "ingredient": {
+    "item": "methanecow:water_breathing_milk_bucket"
+  },
+  "result": "methanecow:pasteurized_water_breathing_milk_bucket",
+  "experience": 0.1,
+  "cookingtime": 200
+}

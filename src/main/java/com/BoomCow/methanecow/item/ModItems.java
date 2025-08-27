@@ -19,7 +19,7 @@ public class ModItems {
     public static final DeferredRegister<Item> ITEMS =
             DeferredRegister.create(ForgeRegistries.ITEMS, MethaneCow.MOD_ID);
 
-    public static final RegistryObject<Item> CHEESE_CLOTH = ITEMS.register("cheese_cloth", () ->
+    public static final RegistryObject<Item> CHEESECLOTH = ITEMS.register("cheesecloth", () ->
             new Item((new Item.Properties()).group(ModItemGroup.METHANECOW)));
 
     public static final RegistryObject<ModSpawnEggItem> METHANE_COW_SPAWN_EGG = ITEMS.register("methane_cow_spawn_egg",
@@ -104,82 +104,85 @@ public class ModItems {
     public static final RegistryObject<FlavoredMilkItem> SLOW_FALLING_MILK_BUCKET = ITEMS.register("slow_falling_milk_bucket", () ->
             new FlavoredMilkItem((new Item.Properties()).containerItem(BUCKET).maxStackSize(1).group(ModItemGroup.METHANECOW)));
 
-    public static final RegistryObject<PasteurizedMilkItem> PASTEURISED_SPEED_MILK_BUCKET = ITEMS.register("pasteurised_speed_milk_bucket", () ->
+    public static final RegistryObject<PasteurizedMilkItem> PASTEURIZED_MILK_BUCKET = ITEMS.register("pasteurized_milk_bucket", () ->
             new PasteurizedMilkItem((new Item.Properties()).containerItem(BUCKET).maxStackSize(1).group(ModItemGroup.METHANECOW)));
 
-    public static final RegistryObject<PasteurizedMilkItem> PASTEURISED_SLOWNESS_MILK_BUCKET = ITEMS.register("pasteurised_slowness_milk_bucket", () ->
+    public static final RegistryObject<PasteurizedMilkItem> PASTEURIZED_SPEED_MILK_BUCKET = ITEMS.register("pasteurized_speed_milk_bucket", () ->
             new PasteurizedMilkItem((new Item.Properties()).containerItem(BUCKET).maxStackSize(1).group(ModItemGroup.METHANECOW)));
 
-    public static final RegistryObject<PasteurizedMilkItem> PASTEURISED_HASTE_MILK_BUCKET = ITEMS.register("pasteurised_haste_milk_bucket", () ->
+    public static final RegistryObject<PasteurizedMilkItem> PASTEURIZED_SLOWNESS_MILK_BUCKET = ITEMS.register("pasteurized_slowness_milk_bucket", () ->
             new PasteurizedMilkItem((new Item.Properties()).containerItem(BUCKET).maxStackSize(1).group(ModItemGroup.METHANECOW)));
 
-    public static final RegistryObject<PasteurizedMilkItem> PASTEURISED_MINING_FATIGUE_MILK_BUCKET = ITEMS.register("pasteurised_mining_fatigue_milk_bucket", () ->
+    public static final RegistryObject<PasteurizedMilkItem> PASTEURIZED_HASTE_MILK_BUCKET = ITEMS.register("pasteurized_haste_milk_bucket", () ->
             new PasteurizedMilkItem((new Item.Properties()).containerItem(BUCKET).maxStackSize(1).group(ModItemGroup.METHANECOW)));
 
-    public static final RegistryObject<PasteurizedMilkItem> PASTEURISED_STRENGTH_MILK_BUCKET = ITEMS.register("pasteurised_strength_milk_bucket", () ->
+    public static final RegistryObject<PasteurizedMilkItem> PASTEURIZED_MINING_FATIGUE_MILK_BUCKET = ITEMS.register("pasteurized_mining_fatigue_milk_bucket", () ->
             new PasteurizedMilkItem((new Item.Properties()).containerItem(BUCKET).maxStackSize(1).group(ModItemGroup.METHANECOW)));
 
-    public static final RegistryObject<PasteurizedMilkItem> PASTEURISED_INSTANT_HEALTH_MILK_BUCKET = ITEMS.register("pasteurised_instant_health_milk_bucket", () ->
+    public static final RegistryObject<PasteurizedMilkItem> PASTEURIZED_STRENGTH_MILK_BUCKET = ITEMS.register("pasteurized_strength_milk_bucket", () ->
             new PasteurizedMilkItem((new Item.Properties()).containerItem(BUCKET).maxStackSize(1).group(ModItemGroup.METHANECOW)));
 
-    public static final RegistryObject<PasteurizedMilkItem> PASTEURISED_INSTANT_DAMAGE_MILK_BUCKET = ITEMS.register("pasteurised_instant_damage_milk_bucket", () ->
+    public static final RegistryObject<PasteurizedMilkItem> PASTEURIZED_INSTANT_HEALTH_MILK_BUCKET = ITEMS.register("pasteurized_instant_health_milk_bucket", () ->
             new PasteurizedMilkItem((new Item.Properties()).containerItem(BUCKET).maxStackSize(1).group(ModItemGroup.METHANECOW)));
 
-    public static final RegistryObject<PasteurizedMilkItem> PASTEURISED_JUMP_BOOST_MILK_BUCKET = ITEMS.register("pasteurised_jump_boost_milk_bucket", () ->
+    public static final RegistryObject<PasteurizedMilkItem> PASTEURIZED_INSTANT_DAMAGE_MILK_BUCKET = ITEMS.register("pasteurized_instant_damage_milk_bucket", () ->
             new PasteurizedMilkItem((new Item.Properties()).containerItem(BUCKET).maxStackSize(1).group(ModItemGroup.METHANECOW)));
 
-    public static final RegistryObject<PasteurizedMilkItem> PASTEURISED_NAUSEA_MILK_BUCKET = ITEMS.register("pasteurised_nausea_milk_bucket", () ->
+    public static final RegistryObject<PasteurizedMilkItem> PASTEURIZED_JUMP_BOOST_MILK_BUCKET = ITEMS.register("pasteurized_jump_boost_milk_bucket", () ->
             new PasteurizedMilkItem((new Item.Properties()).containerItem(BUCKET).maxStackSize(1).group(ModItemGroup.METHANECOW)));
 
-    public static final RegistryObject<PasteurizedMilkItem> PASTEURISED_REGENERATION_MILK_BUCKET = ITEMS.register("pasteurised_regeneration_milk_bucket", () ->
+    public static final RegistryObject<PasteurizedMilkItem> PASTEURIZED_NAUSEA_MILK_BUCKET = ITEMS.register("pasteurized_nausea_milk_bucket", () ->
             new PasteurizedMilkItem((new Item.Properties()).containerItem(BUCKET).maxStackSize(1).group(ModItemGroup.METHANECOW)));
 
-    public static final RegistryObject<PasteurizedMilkItem> PASTEURISED_RESISTANCE_MILK_BUCKET = ITEMS.register("pasteurised_resistance_milk_bucket", () ->
+    public static final RegistryObject<PasteurizedMilkItem> PASTEURIZED_REGENERATION_MILK_BUCKET = ITEMS.register("pasteurized_regeneration_milk_bucket", () ->
             new PasteurizedMilkItem((new Item.Properties()).containerItem(BUCKET).maxStackSize(1).group(ModItemGroup.METHANECOW)));
 
-    public static final RegistryObject<PasteurizedMilkItem> PASTEURISED_FIRE_RESISTANCE_MILK_BUCKET = ITEMS.register("pasteurised_fire_resistance_milk_bucket", () ->
+    public static final RegistryObject<PasteurizedMilkItem> PASTEURIZED_RESISTANCE_MILK_BUCKET = ITEMS.register("pasteurized_resistance_milk_bucket", () ->
             new PasteurizedMilkItem((new Item.Properties()).containerItem(BUCKET).maxStackSize(1).group(ModItemGroup.METHANECOW)));
 
-    public static final RegistryObject<PasteurizedMilkItem> PASTEURISED_WATER_BREATHING_MILK_BUCKET = ITEMS.register("pasteurised_water_breathing_milk_bucket", () ->
+    public static final RegistryObject<PasteurizedMilkItem> PASTEURIZED_FIRE_RESISTANCE_MILK_BUCKET = ITEMS.register("pasteurized_fire_resistance_milk_bucket", () ->
             new PasteurizedMilkItem((new Item.Properties()).containerItem(BUCKET).maxStackSize(1).group(ModItemGroup.METHANECOW)));
 
-    public static final RegistryObject<PasteurizedMilkItem> PASTEURISED_INVISIBILITY_MILK_BUCKET = ITEMS.register("pasteurised_invisibility_milk_bucket", () ->
+    public static final RegistryObject<PasteurizedMilkItem> PASTEURIZED_WATER_BREATHING_MILK_BUCKET = ITEMS.register("pasteurized_water_breathing_milk_bucket", () ->
             new PasteurizedMilkItem((new Item.Properties()).containerItem(BUCKET).maxStackSize(1).group(ModItemGroup.METHANECOW)));
 
-    public static final RegistryObject<PasteurizedMilkItem> PASTEURISED_BLINDNESS_MILK_BUCKET = ITEMS.register("pasteurised_blindness_milk_bucket", () ->
+    public static final RegistryObject<PasteurizedMilkItem> PASTEURIZED_INVISIBILITY_MILK_BUCKET = ITEMS.register("pasteurized_invisibility_milk_bucket", () ->
             new PasteurizedMilkItem((new Item.Properties()).containerItem(BUCKET).maxStackSize(1).group(ModItemGroup.METHANECOW)));
 
-    public static final RegistryObject<PasteurizedMilkItem> PASTEURISED_NIGHT_VISION_MILK_BUCKET = ITEMS.register("pasteurised_night_vision_milk_bucket", () ->
+    public static final RegistryObject<PasteurizedMilkItem> PASTEURIZED_BLINDNESS_MILK_BUCKET = ITEMS.register("pasteurized_blindness_milk_bucket", () ->
             new PasteurizedMilkItem((new Item.Properties()).containerItem(BUCKET).maxStackSize(1).group(ModItemGroup.METHANECOW)));
 
-    public static final RegistryObject<PasteurizedMilkItem> PASTEURISED_HUNGER_MILK_BUCKET = ITEMS.register("pasteurised_hunger_milk_bucket", () ->
+    public static final RegistryObject<PasteurizedMilkItem> PASTEURIZED_NIGHT_VISION_MILK_BUCKET = ITEMS.register("pasteurized_night_vision_milk_bucket", () ->
             new PasteurizedMilkItem((new Item.Properties()).containerItem(BUCKET).maxStackSize(1).group(ModItemGroup.METHANECOW)));
 
-    public static final RegistryObject<PasteurizedMilkItem> PASTEURISED_WEAKNESS_MILK_BUCKET = ITEMS.register("pasteurised_weakness_milk_bucket", () ->
+    public static final RegistryObject<PasteurizedMilkItem> PASTEURIZED_HUNGER_MILK_BUCKET = ITEMS.register("pasteurized_hunger_milk_bucket", () ->
             new PasteurizedMilkItem((new Item.Properties()).containerItem(BUCKET).maxStackSize(1).group(ModItemGroup.METHANECOW)));
 
-    public static final RegistryObject<PasteurizedMilkItem> PASTEURISED_POISON_MILK_BUCKET = ITEMS.register("pasteurised_poison_milk_bucket", () ->
+    public static final RegistryObject<PasteurizedMilkItem> PASTEURIZED_WEAKNESS_MILK_BUCKET = ITEMS.register("pasteurized_weakness_milk_bucket", () ->
             new PasteurizedMilkItem((new Item.Properties()).containerItem(BUCKET).maxStackSize(1).group(ModItemGroup.METHANECOW)));
 
-    public static final RegistryObject<PasteurizedMilkItem> PASTEURISED_WITHER_MILK_BUCKET = ITEMS.register("pasteurised_wither_milk_bucket", () ->
+    public static final RegistryObject<PasteurizedMilkItem> PASTEURIZED_POISON_MILK_BUCKET = ITEMS.register("pasteurized_poison_milk_bucket", () ->
             new PasteurizedMilkItem((new Item.Properties()).containerItem(BUCKET).maxStackSize(1).group(ModItemGroup.METHANECOW)));
 
-    public static final RegistryObject<PasteurizedMilkItem> PASTEURISED_SATURATION_MILK_BUCKET = ITEMS.register("pasteurised_saturation_milk_bucket", () ->
+    public static final RegistryObject<PasteurizedMilkItem> PASTEURIZED_WITHER_MILK_BUCKET = ITEMS.register("pasteurized_wither_milk_bucket", () ->
             new PasteurizedMilkItem((new Item.Properties()).containerItem(BUCKET).maxStackSize(1).group(ModItemGroup.METHANECOW)));
 
-    public static final RegistryObject<PasteurizedMilkItem> PASTEURISED_GLOWING_MILK_BUCKET = ITEMS.register("pasteurised_glowing_milk_bucket", () ->
+    public static final RegistryObject<PasteurizedMilkItem> PASTEURIZED_SATURATION_MILK_BUCKET = ITEMS.register("pasteurized_saturation_milk_bucket", () ->
             new PasteurizedMilkItem((new Item.Properties()).containerItem(BUCKET).maxStackSize(1).group(ModItemGroup.METHANECOW)));
 
-    public static final RegistryObject<PasteurizedMilkItem> PASTEURISED_LEVITATION_MILK_BUCKET = ITEMS.register("pasteurised_levitation_milk_bucket", () ->
+    public static final RegistryObject<PasteurizedMilkItem> PASTEURIZED_GLOWING_MILK_BUCKET = ITEMS.register("pasteurized_glowing_milk_bucket", () ->
             new PasteurizedMilkItem((new Item.Properties()).containerItem(BUCKET).maxStackSize(1).group(ModItemGroup.METHANECOW)));
 
-    public static final RegistryObject<PasteurizedMilkItem> PASTEURISED_LUCK_MILK_BUCKET = ITEMS.register("pasteurised_luck_milk_bucket", () ->
+    public static final RegistryObject<PasteurizedMilkItem> PASTEURIZED_LEVITATION_MILK_BUCKET = ITEMS.register("pasteurized_levitation_milk_bucket", () ->
             new PasteurizedMilkItem((new Item.Properties()).containerItem(BUCKET).maxStackSize(1).group(ModItemGroup.METHANECOW)));
 
-    public static final RegistryObject<PasteurizedMilkItem> PASTEURISED_UNLUCK_MILK_BUCKET = ITEMS.register("pasteurised_unluck_milk_bucket", () ->
+    public static final RegistryObject<PasteurizedMilkItem> PASTEURIZED_LUCK_MILK_BUCKET = ITEMS.register("pasteurized_luck_milk_bucket", () ->
             new PasteurizedMilkItem((new Item.Properties()).containerItem(BUCKET).maxStackSize(1).group(ModItemGroup.METHANECOW)));
 
-    public static final RegistryObject<PasteurizedMilkItem> PASTEURISED_SLOW_FALLING_MILK_BUCKET = ITEMS.register("pasteurised_slow_falling_milk_bucket", () ->
+    public static final RegistryObject<PasteurizedMilkItem> PASTEURIZED_UNLUCK_MILK_BUCKET = ITEMS.register("pasteurized_unluck_milk_bucket", () ->
+            new PasteurizedMilkItem((new Item.Properties()).containerItem(BUCKET).maxStackSize(1).group(ModItemGroup.METHANECOW)));
+
+    public static final RegistryObject<PasteurizedMilkItem> PASTEURIZED_SLOW_FALLING_MILK_BUCKET = ITEMS.register("pasteurized_slow_falling_milk_bucket", () ->
             new PasteurizedMilkItem((new Item.Properties()).containerItem(BUCKET).maxStackSize(1).group(ModItemGroup.METHANECOW)));
 
     public static final RegistryObject<Item> CHEESE = ITEMS.register("cheese", () ->

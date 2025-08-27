@@ -1,0 +1,13 @@
+{
+  "type": "methanecow:cheese_basin",
+  "input": {
+    "ingredient": {
+      "item": "methanecow:pasteurized_slow_falling_milk_bucket"
+    }
+  },
+  "output": {
+    "item": "methanecow:slow_falling_cheese",
+    "count": 4
+  },
+  "processTime": 400
+}

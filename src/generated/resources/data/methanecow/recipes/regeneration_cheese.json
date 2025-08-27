@@ -1,0 +1,13 @@
+{
+  "type": "methanecow:cheese_basin",
+  "input": {
+    "ingredient": {
+      "item": "methanecow:pasteurized_regeneration_milk_bucket"
+    }
+  },
+  "output": {
+    "item": "methanecow:regeneration_cheese",
+    "count": 4
+  },
+  "processTime": 400
+}

@@ -1,0 +1,13 @@
+{
+  "type": "methanecow:cheese_basin",
+  "input": {
+    "ingredient": {
+      "item": "methanecow:pasteurized_instant_damage_milk_bucket"
+    }
+  },
+  "output": {
+    "item": "methanecow:instant_damage_cheese",
+    "count": 4
+  },
+  "processTime": 400
+}

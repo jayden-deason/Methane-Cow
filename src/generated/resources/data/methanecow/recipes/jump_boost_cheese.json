@@ -1,0 +1,13 @@
+{
+  "type": "methanecow:cheese_basin",
+  "input": {
+    "ingredient": {
+      "item": "methanecow:pasteurized_jump_boost_milk_bucket"
+    }
+  },
+  "output": {
+    "item": "methanecow:jump_boost_cheese",
+    "count": 4
+  },
+  "processTime": 400
+}

@@ -1,0 +1,13 @@
+{
+  "type": "methanecow:cheese_basin",
+  "input": {
+    "ingredient": {
+      "item": "methanecow:pasteurized_levitation_milk_bucket"
+    }
+  },
+  "output": {
+    "item": "methanecow:levitation_cheese",
+    "count": 4
+  },
+  "processTime": 400
+}

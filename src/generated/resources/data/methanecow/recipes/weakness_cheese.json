@@ -1,0 +1,13 @@
+{
+  "type": "methanecow:cheese_basin",
+  "input": {
+    "ingredient": {
+      "item": "methanecow:pasteurized_weakness_milk_bucket"
+    }
+  },
+  "output": {
+    "item": "methanecow:weakness_cheese",
+    "count": 4
+  },
+  "processTime": 400
+}

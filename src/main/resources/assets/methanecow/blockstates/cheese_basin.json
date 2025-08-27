@@ -1,0 +1,19 @@
+{
+  "variants": {
+    "state=empty": {
+      "model": "methanecow:block/cheese_basin"
+    },
+    "state=cheesecloth": {
+      "model": "methanecow:block/cheese_basin_cheesecloth"
+    },
+    "state=lid_1": {
+      "model": "methanecow:block/cheese_basin_lid_1"
+    },
+    "state=lid_2": {
+      "model": "methanecow:block/cheese_basin_lid_2"
+    },
+    "state=cheese": {
+      "model": "methanecow:block/cheese_basin_cheese"
+    }
+  }
+}

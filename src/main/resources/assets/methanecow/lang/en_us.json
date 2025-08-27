@@ -3,7 +3,7 @@
 
   "item.methanecow.methane_cow_spawn_egg": "Methane Cow Spawn Egg",
 
-  "item.methanecow.cheese_cloth": "Cheese Cloth",
+  "item.methanecow.cheesecloth": "Cheesecloth",
 
   "item.methanecow.speed_milk_bucket": "Speed Milk Bucket",
   "item.methanecow.slowness_milk_bucket": "Slowness Milk Bucket",
@@ -32,33 +32,33 @@
   "item.methanecow.unluck_milk_bucket": "Unlucky Milk Bucket",
   "item.methanecow.slow_falling_milk_bucket": "Slow Falling Milk Bucket",
 
-
-  "item.methanecow.pasteurised_speed_milk_bucket": "Pasteurized Speed Milk Bucket",
-  "item.methanecow.pasteurised_slowness_milk_bucket": "Pasteurized Slowness Milk Bucket",
-  "item.methanecow.pasteurised_haste_milk_bucket": "Pasteurized Haste Milk Bucket",
-  "item.methanecow.pasteurised_mining_fatigue_milk_bucket": "Pasteurized Mining Fatigue Milk Bucket",
-  "item.methanecow.pasteurised_strength_milk_bucket": "Pasteurized Strength Milk Bucket",
-  "item.methanecow.pasteurised_instant_health_milk_bucket": "Pasteurized Instant Health Milk Bucket",
-  "item.methanecow.pasteurised_instant_damage_milk_bucket": "Pasteurized Instant Damage Milk Bucket",
-  "item.methanecow.pasteurised_jump_boost_milk_bucket": "Pasteurized Jump Boost Milk Bucket",
-  "item.methanecow.pasteurised_nausea_milk_bucket": "Pasteurized Nausea Milk Bucket",
-  "item.methanecow.pasteurised_regeneration_milk_bucket": "Pasteurized Regeneration Milk Bucket",
-  "item.methanecow.pasteurised_resistance_milk_bucket": "Pasteurized Resistance Milk Bucket",
-  "item.methanecow.pasteurised_fire_resistance_milk_bucket": "Pasteurized Fire Resistance Milk Bucket",
-  "item.methanecow.pasteurised_water_breathing_milk_bucket": "Pasteurized Water Breathing Milk Bucket",
-  "item.methanecow.pasteurised_invisibility_milk_bucket": "Pasteurized Invisibility Milk Bucket",
-  "item.methanecow.pasteurised_blindness_milk_bucket": "Pasteurized Blindness Milk Bucket",
-  "item.methanecow.pasteurised_night_vision_milk_bucket": "Pasteurized Night Vision Milk Bucket",
-  "item.methanecow.pasteurised_hunger_milk_bucket": "Pasteurized Hunger Milk Bucket",
-  "item.methanecow.pasteurised_weakness_milk_bucket": "Pasteurized Weakness Milk Bucket",
-  "item.methanecow.pasteurised_poison_milk_bucket": "Pasteurized Poison Milk Bucket",
-  "item.methanecow.pasteurised_wither_milk_bucket": "Pasteurized Wither Milk Bucket",
-  "item.methanecow.pasteurised_saturation_milk_bucket": "Pasteurized Saturation Milk Bucket",
-  "item.methanecow.pasteurised_glowing_milk_bucket": "Pasteurized Glowing Milk Bucket",
-  "item.methanecow.pasteurised_levitation_milk_bucket": "Pasteurized Levitation Milk Bucket",
-  "item.methanecow.pasteurised_luck_milk_bucket": "Pasteurized Luck Milk Bucket",
-  "item.methanecow.pasteurised_unluck_milk_bucket": "Pasteurized Unluck Milk Bucket",
-  "item.methanecow.pasteurised_slow_falling_milk_bucket": "Pasteurized Slow Falling Milk Bucket",
+  "item.methanecow.pasteurized_milk_bucket": "Pasteurized Milk Bucket",
+  "item.methanecow.pasteurized_speed_milk_bucket": "Pasteurized Speed Milk Bucket",
+  "item.methanecow.pasteurized_slowness_milk_bucket": "Pasteurized Slowness Milk Bucket",
+  "item.methanecow.pasteurized_haste_milk_bucket": "Pasteurized Haste Milk Bucket",
+  "item.methanecow.pasteurized_mining_fatigue_milk_bucket": "Pasteurized Mining Fatigue Milk Bucket",
+  "item.methanecow.pasteurized_strength_milk_bucket": "Pasteurized Strength Milk Bucket",
+  "item.methanecow.pasteurized_instant_health_milk_bucket": "Pasteurized Instant Health Milk Bucket",
+  "item.methanecow.pasteurized_instant_damage_milk_bucket": "Pasteurized Instant Damage Milk Bucket",
+  "item.methanecow.pasteurized_jump_boost_milk_bucket": "Pasteurized Jump Boost Milk Bucket",
+  "item.methanecow.pasteurized_nausea_milk_bucket": "Pasteurized Nausea Milk Bucket",
+  "item.methanecow.pasteurized_regeneration_milk_bucket": "Pasteurized Regeneration Milk Bucket",
+  "item.methanecow.pasteurized_resistance_milk_bucket": "Pasteurized Resistance Milk Bucket",
+  "item.methanecow.pasteurized_fire_resistance_milk_bucket": "Pasteurized Fire Resistance Milk Bucket",
+  "item.methanecow.pasteurized_water_breathing_milk_bucket": "Pasteurized Water Breathing Milk Bucket",
+  "item.methanecow.pasteurized_invisibility_milk_bucket": "Pasteurized Invisibility Milk Bucket",
+  "item.methanecow.pasteurized_blindness_milk_bucket": "Pasteurized Blindness Milk Bucket",
+  "item.methanecow.pasteurized_night_vision_milk_bucket": "Pasteurized Night Vision Milk Bucket",
+  "item.methanecow.pasteurized_hunger_milk_bucket": "Pasteurized Hunger Milk Bucket",
+  "item.methanecow.pasteurized_weakness_milk_bucket": "Pasteurized Weakness Milk Bucket",
+  "item.methanecow.pasteurized_poison_milk_bucket": "Pasteurized Poison Milk Bucket",
+  "item.methanecow.pasteurized_wither_milk_bucket": "Pasteurized Wither Milk Bucket",
+  "item.methanecow.pasteurized_saturation_milk_bucket": "Pasteurized Saturation Milk Bucket",
+  "item.methanecow.pasteurized_glowing_milk_bucket": "Pasteurized Glowing Milk Bucket",
+  "item.methanecow.pasteurized_levitation_milk_bucket": "Pasteurized Levitation Milk Bucket",
+  "item.methanecow.pasteurized_luck_milk_bucket": "Pasteurized Luck Milk Bucket",
+  "item.methanecow.pasteurized_unluck_milk_bucket": "Pasteurized Unluck Milk Bucket",
+  "item.methanecow.pasteurized_slow_falling_milk_bucket": "Pasteurized Slow Falling Milk Bucket",
 
   "item.methanecow.cheese": "Cheese",
   "item.methanecow.speed_cheese": "Speed Cheese",
@@ -288,7 +288,6 @@
   "item.minecraft.lingering_potion.effect.unluck": "Lingering Potion of Unluck",
   "item.minecraft.tipped_arrow.effect.unluck": "Arrow of Unluck",
 
-
   "effect.speed_cow": "Speed Emissions",
   "effect.slowness_cow": "Slowness Emissions",
   "effect.haste_cow": "Haste Emissions",
@@ -343,5 +342,7 @@
   "effect.methanecow.unluck_cow": "Unluck Cow",
   "effect.methanecow.slow_falling_cow": "Slow Falling Cow",
 
-  "entity.methanecow.methane_cow": "Methane Cow"
+  "entity.methanecow.methane_cow": "Methane Cow",
+
+  "block.methanecow.cheese_basin": "Cheese Basin"
 }

@@ -1,0 +1,13 @@
+{
+  "type": "methanecow:cheese_basin",
+  "input": {
+    "ingredient": {
+      "item": "methanecow:pasteurized_unluck_milk_bucket"
+    }
+  },
+  "output": {
+    "item": "methanecow:unluck_cheese",
+    "count": 4
+  },
+  "processTime": 400
+}

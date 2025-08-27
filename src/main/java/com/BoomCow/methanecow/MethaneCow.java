@@ -1,9 +1,12 @@
 package com.BoomCow.methanecow;
 
+import com.BoomCow.methanecow.block.ModBlocks;
 import com.BoomCow.methanecow.effect.ModEffects;
 import com.BoomCow.methanecow.entity.ModEntityTypes;
 import com.BoomCow.methanecow.item.ModItems;
 import com.BoomCow.methanecow.potions.ModPotions;
+import com.BoomCow.methanecow.recipe.ModRecipes;
+import com.BoomCow.methanecow.tileentity.ModTileEntities;
 import com.BoomCow.methanecow.util.ModSoundEvents;
 import net.minecraft.block.Block;
 import net.minecraft.block.Blocks;
@@ -40,10 +43,13 @@ public class MethaneCow
 
         ModEntityTypes.register(eventBus);
         ModItems.register(eventBus);
+        ModBlocks.register(eventBus);
+        ModTileEntities.register(eventBus);
 
         ModSoundEvents.register(eventBus);
         ModEffects.register(eventBus);
         ModPotions.register(eventBus);
+        ModRecipes.register(eventBus);
 
 
         eventBus.addListener(this::setup);

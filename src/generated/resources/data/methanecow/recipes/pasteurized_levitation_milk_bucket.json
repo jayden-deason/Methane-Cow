@@ -1,0 +1,9 @@
+{
+  "type": "minecraft:smelting",
+  "ingredient": {
+    "item": "methanecow:levitation_milk_bucket"
+  },
+  "result": "methanecow:pasteurized_levitation_milk_bucket",
+  "experience": 0.1,
+  "cookingtime": 200
+}

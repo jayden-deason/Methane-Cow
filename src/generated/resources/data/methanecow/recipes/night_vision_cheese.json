@@ -1,0 +1,13 @@
+{
+  "type": "methanecow:cheese_basin",
+  "input": {
+    "ingredient": {
+      "item": "methanecow:pasteurized_night_vision_milk_bucket"
+    }
+  },
+  "output": {
+    "item": "methanecow:night_vision_cheese",
+    "count": 4
+  },
+  "processTime": 400
+}

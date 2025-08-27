@@ -1,0 +1,13 @@
+{
+  "type": "methanecow:cheese_basin",
+  "input": {
+    "ingredient": {
+      "item": "methanecow:pasteurized_strength_milk_bucket"
+    }
+  },
+  "output": {
+    "item": "methanecow:strength_cheese",
+    "count": 4
+  },
+  "processTime": 400
+}
