@@ -29,82 +29,82 @@ public class ModFoods extends Item {
     public static final Food CHEESE = new Food.Builder().hunger(5).saturation(0.6F).build();
 
     public static final Food SPEED_CHEESE = new Food.Builder().hunger(5).saturation(0.6F).effect(()
-            -> new EffectInstance(Effects.SPEED, 600, 0), 1.0F).build();
+            -> new EffectInstance(Effects.SPEED, 600, 0), 1.0F).setAlwaysEdible().build();
 
     public static final Food SLOWNESS_CHEESE = new Food.Builder().hunger(5).saturation(0.6F).effect(()
-            -> new EffectInstance(Effects.SLOWNESS, 600, 0), 1.0F).build();
+            -> new EffectInstance(Effects.SLOWNESS, 600, 0), 1.0F).setAlwaysEdible().build();
 
     public static final Food HASTE_CHEESE = new Food.Builder().hunger(5).saturation(0.6F).effect(()
-            -> new EffectInstance(Effects.HASTE, 600, 0), 1.0F).build();
+            -> new EffectInstance(Effects.HASTE, 600, 0), 1.0F).setAlwaysEdible().build();
 
     public static final Food MINING_FATIGUE_CHEESE = new Food.Builder().hunger(5).saturation(0.6F).effect(()
-            -> new EffectInstance(Effects.MINING_FATIGUE, 600, 0), 1.0F).build();
+            -> new EffectInstance(Effects.MINING_FATIGUE, 600, 0), 1.0F).setAlwaysEdible().build();
 
     public static final Food STRENGTH_CHEESE = new Food.Builder().hunger(5).saturation(0.6F).effect(()
-            -> new EffectInstance(Effects.STRENGTH, 600, 0), 1.0F).build();
+            -> new EffectInstance(Effects.STRENGTH, 600, 0), 1.0F).setAlwaysEdible().build();
 
     public static final Food INSTANT_HEALTH_CHEESE = new Food.Builder().hunger(5).saturation(0.6F).effect(()
-            -> new EffectInstance(Effects.INSTANT_HEALTH, 1, 0), 1.0F).build();
+            -> new EffectInstance(Effects.INSTANT_HEALTH, 1, 0), 1.0F).setAlwaysEdible().build();
 
     public static final Food INSTANT_DAMAGE_CHEESE = new Food.Builder().hunger(5).saturation(0.6F).effect(()
-            -> new EffectInstance(Effects.INSTANT_DAMAGE, 1, 0), 1.0F).build();
+            -> new EffectInstance(Effects.INSTANT_DAMAGE, 1, 0), 1.0F).setAlwaysEdible().build();
 
     public static final Food JUMP_BOOST_CHEESE = new Food.Builder().hunger(5).saturation(0.6F).effect(()
-            -> new EffectInstance(Effects.JUMP_BOOST, 600, 0), 1.0F).build();
+            -> new EffectInstance(Effects.JUMP_BOOST, 600, 0), 1.0F).setAlwaysEdible().build();
 
     public static final Food NAUSEA_CHEESE = new Food.Builder().hunger(5).saturation(0.6F).effect(()
-            -> new EffectInstance(Effects.NAUSEA, 600, 0), 1.0F).build();
+            -> new EffectInstance(Effects.NAUSEA, 600, 0), 1.0F).setAlwaysEdible().build();
 
     public static final Food REGENERATION_CHEESE = new Food.Builder().hunger(5).saturation(0.6F).effect(()
-            -> new EffectInstance(Effects.REGENERATION, 600, 0), 1.0F).build();
+            -> new EffectInstance(Effects.REGENERATION, 600, 0), 1.0F).setAlwaysEdible().build();
 
     public static final Food RESISTANCE_CHEESE = new Food.Builder().hunger(5).saturation(0.6F).effect(()
-            -> new EffectInstance(Effects.RESISTANCE, 600, 0), 1.0F).build();
+            -> new EffectInstance(Effects.RESISTANCE, 600, 0), 1.0F).setAlwaysEdible().build();
 
     public static final Food FIRE_RESISTANCE_CHEESE = new Food.Builder().hunger(5).saturation(0.6F).effect(()
-            -> new EffectInstance(Effects.FIRE_RESISTANCE, 600, 0), 1.0F).build();
+            -> new EffectInstance(Effects.FIRE_RESISTANCE, 600, 0), 1.0F).setAlwaysEdible().build();
 
     public static final Food WATER_BREATHING_CHEESE = new Food.Builder().hunger(5).saturation(0.6F).effect(()
-            -> new EffectInstance(Effects.WATER_BREATHING, 600, 0), 1.0F).build();
+            -> new EffectInstance(Effects.WATER_BREATHING, 600, 0), 1.0F).setAlwaysEdible().build();
 
     public static final Food INVISIBILITY_CHEESE = new Food.Builder().hunger(5).saturation(0.6F).effect(()
-            -> new EffectInstance(Effects.INVISIBILITY, 600, 0), 1.0F).build();
+            -> new EffectInstance(Effects.INVISIBILITY, 600, 0), 1.0F).setAlwaysEdible().build();
 
     public static final Food BLINDNESS_CHEESE = new Food.Builder().hunger(5).saturation(0.6F).effect(()
-            -> new EffectInstance(Effects.BLINDNESS, 600, 0), 1.0F).build();
+            -> new EffectInstance(Effects.BLINDNESS, 600, 0), 1.0F).setAlwaysEdible().build();
 
     public static final Food NIGHT_VISION_CHEESE = new Food.Builder().hunger(5).saturation(0.6F).effect(()
-            -> new EffectInstance(Effects.NIGHT_VISION, 600, 0), 1.0F).build();
+            -> new EffectInstance(Effects.NIGHT_VISION, 600, 0), 1.0F).setAlwaysEdible().build();
 
     public static final Food HUNGER_CHEESE = new Food.Builder().hunger(5).saturation(0.6F).effect(()
-            -> new EffectInstance(Effects.HUNGER, 600, 0), 1.0F).build();
+            -> new EffectInstance(Effects.HUNGER, 600, 0), 1.0F).setAlwaysEdible().build();
 
     public static final Food WEAKNESS_CHEESE = new Food.Builder().hunger(5).saturation(0.6F).effect(()
-            -> new EffectInstance(Effects.WEAKNESS, 600, 0), 1.0F).build();
+            -> new EffectInstance(Effects.WEAKNESS, 600, 0), 1.0F).setAlwaysEdible().build();
 
     public static final Food POISON_CHEESE = new Food.Builder().hunger(5).saturation(0.6F).effect(()
-            -> new EffectInstance(Effects.POISON, 600, 0), 1.0F).build();
+            -> new EffectInstance(Effects.POISON, 600, 0), 1.0F).setAlwaysEdible().build();
 
     public static final Food WITHER_CHEESE = new Food.Builder().hunger(5).saturation(0.6F).effect(()
-            -> new EffectInstance(Effects.WITHER, 600, 0), 1.0F).build();
+            -> new EffectInstance(Effects.WITHER, 600, 0), 1.0F).setAlwaysEdible().build();
 
     public static final Food SATURATION_CHEESE = new Food.Builder().hunger(5).saturation(0.6F).effect(()
-            -> new EffectInstance(Effects.SATURATION, 600, 0), 1.0F).build();
+            -> new EffectInstance(Effects.SATURATION, 600, 0), 1.0F).setAlwaysEdible().build();
 
     public static final Food GLOWING_CHEESE = new Food.Builder().hunger(5).saturation(0.6F).effect(()
-            -> new EffectInstance(Effects.GLOWING, 600, 0), 1.0F).build();
+            -> new EffectInstance(Effects.GLOWING, 600, 0), 1.0F).setAlwaysEdible().build();
 
     public static final Food LEVITATION_CHEESE = new Food.Builder().hunger(5).saturation(0.6F).effect(()
-            -> new EffectInstance(Effects.LEVITATION, 600, 0), 1.0F).build();
+            -> new EffectInstance(Effects.LEVITATION, 600, 0), 1.0F).setAlwaysEdible().build();
 
     public static final Food LUCK_CHEESE = new Food.Builder().hunger(5).saturation(0.6F).effect(()
-            -> new EffectInstance(Effects.LUCK, 600, 0), 1.0F).build();
+            -> new EffectInstance(Effects.LUCK, 600, 0), 1.0F).setAlwaysEdible().build();
 
     public static final Food UNLUCK_CHEESE = new Food.Builder().hunger(5).saturation(0.6F).effect(()
-            -> new EffectInstance(Effects.UNLUCK, 600, 0), 1.0F).build();
+            -> new EffectInstance(Effects.UNLUCK, 600, 0), 1.0F).setAlwaysEdible().build();
 
     public static final Food SLOW_FALLING_CHEESE = new Food.Builder().hunger(5).saturation(0.6F).effect(()
-            -> new EffectInstance(Effects.SLOW_FALLING, 600, 0), 1.0F).build();
+            -> new EffectInstance(Effects.SLOW_FALLING, 600, 0), 1.0F).setAlwaysEdible().build();
 
     @Override
     public void addInformation(ItemStack stack, @Nullable World worldIn, List<ITextComponent> tooltip, ITooltipFlag flagIn) {
